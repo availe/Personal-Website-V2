@@ -23,7 +23,7 @@ export default function NavBar() {
   return (
     <nav className="relative">
       {isDesktop ? (
-        <ul className="flex flex-row">
+        <ul className="flex flex-row justify-end gap-8 pr-16 pt-1">
             {navDict.map(({ href, text }, index) => (
               <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} />
             ))}
@@ -37,7 +37,7 @@ export default function NavBar() {
             <DrawerTrigger className="absolute right-0 top-0 p-4">
               <XIcon />
             </DrawerTrigger>
-            <ul className="pt-10">
+            <ul className="pt-14 pl-10 flex flex-col gap-6">
             {navDict.map(({ href, text }, index) => (
               <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} />
             ))}

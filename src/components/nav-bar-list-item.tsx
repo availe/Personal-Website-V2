@@ -11,11 +11,10 @@ interface NavbarListItemProps {
 const NavbarListItem = ({
   href,
   text,
-  isMobileMenu,
   isActive,
   onItemClick,
 }: NavbarListItemProps) => {
-  const itemClass = `text-xl ${isActive && isMobileMenu ? "font-semibold" : ""} ${isMobileMenu ? "" : " ml-10 hover:border-b text-xl"}`
+  const itemClass = `text-xl hover:border-b`
 
   return (
     <li className={itemClass} onClick={onItemClick}>
