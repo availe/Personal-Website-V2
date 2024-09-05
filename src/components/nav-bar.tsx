@@ -6,16 +6,22 @@ import { MenuIcon } from "lucide-react";
 
 export default function NavBar() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  return isDesktop ? (
-    <div>isDesktop</div>
-  ) : (
-    <Drawer direction="right">
-      <DrawerTrigger>
-        <MenuIcon />
-      </DrawerTrigger>
-      <DrawerContent>
-        Placeholder Link
-      </DrawerContent>
-    </Drawer>
+  return (
+    <nav className="relative">
+      {isDesktop ? (
+        <ul>
+          <li>Placeholder Link</li>
+        </ul>
+      ) : (
+        <Drawer direction="right">
+          <DrawerTrigger className="focus:outline-none absolute right-0 top-0 p-4">
+            <MenuIcon />
+          </DrawerTrigger>
+          <DrawerContent className="focus:outline-none">
+            Placeholder Link
+          </DrawerContent>
+        </Drawer>
+      )}
+    </nav>
   );
 }
