@@ -19,7 +19,7 @@ export default function NavBar() {
             <MenuIcon />
           </DrawerTrigger>
           <DrawerContent className="focus:outline-none">
-            <DrawerTrigger className="absolute right-0 top-0 p-4">
+            <DrawerTrigger className="absolute right-0 top-1 p-4">
               <XIcon />
             </DrawerTrigger>
           </DrawerContent>
