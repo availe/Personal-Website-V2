@@ -12,16 +12,19 @@ const NavbarListItem = ({
   href,
   text,
   isActive,
+  isMobileMenu,
   onItemClick,
 }: NavbarListItemProps) => {
-  const itemClass = `text-xl hover:border-b`
+  const itemClass = `text-xl hover:border-b ml-10`;
 
   return (
-    <li className={itemClass} onClick={onItemClick}>
+    <div>
       <Link href={href}>
-        {text}
+        <li className={itemClass} onClick={onItemClick}>
+          {text}
+        </li>
       </Link>
-    </li>
+    </div>
   );
 };
 

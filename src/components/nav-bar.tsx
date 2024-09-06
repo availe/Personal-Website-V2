@@ -37,9 +37,9 @@ export default function NavBar() {
             <DrawerTrigger className="absolute right-0 top-0 p-4">
               <XIcon />
             </DrawerTrigger>
-            <ul className="pt-14 pl-10 flex flex-col gap-6">
+            <ul className="pt-14 flex flex-col gap-6">
             {navDict.map(({ href, text }, index) => (
-              <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} />
+              <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} isMobileMenu={true} />
             ))}
         </ul>
           </DrawerContent>
