@@ -25,7 +25,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavBar />
+          <header className="sticky top-0 md:w-full md:bg-red-200 md:z-10 md:p-2">
+            <NavBar />
+          </header>
           {children}
         </ThemeProvider>
       </body>
