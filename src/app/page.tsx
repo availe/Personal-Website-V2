@@ -3,16 +3,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-red-200 flex flex-col justify-center bg-[url('/flat-mountains.svg')] bg-no-repeat bg-center bg-cover">
-      <section className="text-center flex flex-col gap-4">
+    <main className="min-h-dvh bg-[url('/flat-mountains.svg')] bg-cover bg-center flex flex-col justify-center">
+      <section className="text-center flex flex-col gap-6 md:gap-8 md:mt-[-10dvh]">
         <div className="flex flex-col gap-2">
-        <div className="uppercase">Hello, I&apos;m Rafael Diaz</div>
-        <div>Prev. Software Engineering Intern at Newmark</div>
+          <h1 className="uppercase text-3xl md:text-5xl">Hello, I&apos;m Rafael Diaz</h1>
+          <p className="md:text-xl">Prev. Software Engineering Intern at Newmark</p>
         </div>
         <Link href="/about">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          About Me
-        </button>
+          <button className="bg-blue-600 hover:bg-blue-500 text-white md:text-xl font-semibold py-2 px-4 rounded">About Me</button>
         </Link>
       </section>
     </main>

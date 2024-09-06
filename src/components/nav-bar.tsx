@@ -18,7 +18,7 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="sticky top-0 md:w-full md:bg-white md:z-10 md:p-2">
+    <header className="md:fixed top-0 md:w-full md:bg-white z-10 md:p-2">
     <nav className="relative">
     <ul className="hidden md:flex flex-row justify-start pr-16 pt-1">
       {navDict.map(({ href, text }, index) => (
