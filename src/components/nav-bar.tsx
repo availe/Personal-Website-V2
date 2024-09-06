@@ -6,6 +6,7 @@ import { Link, MenuIcon, XIcon } from "lucide-react";
 import NavbarListItem from "./nav-bar-list-item";
 import { usePathname, useRouter } from "next/navigation";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import NavbarSocialListItem from "./nav-bar-social-list-item";
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -15,6 +16,19 @@ export default function NavBar() {
     { href: "/about", text: "About" },
     { href: "/projects", text: "Projects" },
     { href: "/resume", text: "Resume" },
+  ];
+
+  const socialDict = [
+    {
+      href: "https://www.linkedin.com/in/rafael-diaz1/",
+      icon: LinkedInLogoIcon,
+      label: "LinkedIn",
+    },
+    {
+      href: "https://github.com/availe",
+      icon: GitHubLogoIcon,
+      label: "GitHub",
+    },
   ];
 
   return (
@@ -27,14 +41,14 @@ export default function NavBar() {
             ))}
           </ul>
           <ul className="hidden md:flex gap-6 pr-10">
-            <a href="https://www.linkedin.com/in/rafael-diaz1/" target="_blank" rel="noopener noreferrer">
-              <LinkedInLogoIcon className="w-8 h-8" />
-              <span className="sr-only">LinkedIn</span>
-            </a>
-            <a href="https://github.com/availe" target="_blank" rel="noopener noreferrer">
-              <GitHubLogoIcon className="w-8 h-8" />
-              <span className="sr-only">GitHub</span>
-            </a>
+            {socialDict.map(({ href, icon, label }, index) => (
+              <NavbarSocialListItem
+                key={index}
+                href={href}
+                icon={icon}
+                label={label}
+              />
+            ))}
           </ul>
         </div>
         <div className="md:hidden">
@@ -49,6 +63,14 @@ export default function NavBar() {
               <ul className="pt-14 flex flex-col gap-6">
                 {navDict.map(({ href, text }, index) => (
                   <NavbarListItem key={index} href={href} text={text} />
+                ))}
+                {socialDict.map(({ href, icon, label }, index) => (
+                  <NavbarSocialListItem
+                    key={index}
+                    href={href}
+                    icon={icon}
+                    label={label}
+                  />
                 ))}
               </ul>
             </DrawerContent>
