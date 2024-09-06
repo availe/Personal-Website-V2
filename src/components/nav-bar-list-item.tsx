@@ -3,16 +3,12 @@ import Link from "next/link";
 interface NavbarListItemProps {
   href: string;
   text: string;
-  isMobileMenu?: boolean;
-  isActive: boolean;
   onItemClick?: () => void;
 }
 
 const NavbarListItem = ({
   href,
   text,
-  isActive,
-  isMobileMenu,
   onItemClick,
 }: NavbarListItemProps) => {
   const itemClass = `text-xl hover:border-b ml-10`;

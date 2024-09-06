@@ -8,8 +8,6 @@ import { usePathname, useRouter } from 'next/navigation';
 
 
 export default function NavBar() {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
-  const router = useRouter();
   const pathname = usePathname();
 
   const navDict = [
@@ -22,29 +20,28 @@ export default function NavBar() {
 
   return (
     <nav className="relative">
-      {isDesktop ? (
-        <ul className="flex flex-row justify-end gap-8 pr-16 pt-1">
-            {navDict.map(({ href, text }, index) => (
-              <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} />
-            ))}
-        </ul>
-      ) : (
-        <Drawer direction="right">
-          <DrawerTrigger className="focus:outline-none absolute right-0 top-0 p-4">
-            <MenuIcon />
+    <ul className="hidden md:flex flex-row justify-end pr-16 pt-1">
+      {navDict.map(({ href, text }, index) => (
+        <NavbarListItem key={index} href={href} text={text} />
+      ))}
+    </ul>
+    <div className="md:hidden">
+      <Drawer direction="right">
+        <DrawerTrigger className="focus:outline-none absolute right-0 top-0 p-4">
+          <MenuIcon />
+        </DrawerTrigger>
+        <DrawerContent className="focus:outline-none">
+          <DrawerTrigger className="absolute right-0 top-0 p-4">
+            <XIcon />
           </DrawerTrigger>
-          <DrawerContent className="focus:outline-none">
-            <DrawerTrigger className="absolute right-0 top-0 p-4">
-              <XIcon />
-            </DrawerTrigger>
-            <ul className="pt-14 flex flex-col gap-6">
+          <ul className="pt-14 flex flex-col gap-6">
             {navDict.map(({ href, text }, index) => (
-              <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} isMobileMenu={true} />
+              <NavbarListItem key={index} href={href} text={text} />
             ))}
-        </ul>
-          </DrawerContent>
-        </Drawer>
-      )}
-    </nav>
+          </ul>
+        </DrawerContent>
+      </Drawer>
+    </div>
+  </nav>
   );
 }
