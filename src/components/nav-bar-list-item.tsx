@@ -6,21 +6,15 @@ interface NavbarListItemProps {
   onItemClick?: () => void;
 }
 
-const NavbarListItem = ({
-  href,
-  text,
-  onItemClick,
-}: NavbarListItemProps) => {
+const NavbarListItem = ({ href, text, onItemClick }: NavbarListItemProps) => {
   const itemClass = `text-xl hover:border-b ml-10`;
 
   return (
-    <div>
-      <Link href={href}>
-        <li className={itemClass} onClick={onItemClick}>
-          {text}
-        </li>
-      </Link>
-    </div>
+    <Link href={href}>
+      <li className={itemClass} onClick={onItemClick}>
+        {text}
+      </li>
+    </Link>
   );
 };
 

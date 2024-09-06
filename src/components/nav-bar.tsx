@@ -13,8 +13,8 @@ export default function NavBar() {
   const navDict = [
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
-    { href: "/work", text: "Work" },
     { href: "/projects", text: "Projects" },
+    { href: "/resume", text: "Resume" },
   ];
 
   return (
