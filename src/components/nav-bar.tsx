@@ -13,14 +13,14 @@ export default function NavBar() {
   const navDict = [
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
-    { href: "/game", text: "Game (WIP)" },
-    // { href: "/data", text: "Data Science" },
-    { href: "/contact", text: "Contact" },
+    { href: "/work", text: "Work" },
+    { href: "/projects", text: "Projects" },
   ];
 
   return (
+    <header className="sticky top-0 md:w-full md:bg-white md:z-10 md:p-2">
     <nav className="relative">
-    <ul className="hidden md:flex flex-row justify-end pr-16 pt-1">
+    <ul className="hidden md:flex flex-row justify-start pr-16 pt-1">
       {navDict.map(({ href, text }, index) => (
         <NavbarListItem key={index} href={href} text={text} />
       ))}
@@ -43,5 +43,6 @@ export default function NavBar() {
       </Drawer>
     </div>
   </nav>
+  </header>
   );
 }

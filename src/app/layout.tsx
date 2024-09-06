@@ -17,19 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <header className="sticky top-0 md:w-full md:bg-red-200 md:z-10 md:p-2">
-            <NavBar />
-          </header>
-          {children}
-        </ThemeProvider>
+          <NavBar />
+        {children}
       </body>
     </html>
   );
