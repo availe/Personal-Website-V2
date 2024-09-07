@@ -14,18 +14,35 @@ import Hero from "@/components/home/hero";
 
 const experiences = [
   {
-    companyLink: "https://www.nmrk.com",
-    companyName: "Newmark",
+    link: "https://www.nmrk.com",
+    name: "Newmark",
     role: "Software Engineer Intern",
     period: "Summer 2024",
     description: "Angular and .NET Full Stack Web Development",
   },
   {
-    companyLink: "https://www.innovare.pe",
-    companyName: "Innovare",
+    link: "https://www.innovare.pe",
+    name: "Innovare",
     role: "Linux Technician Intern",
     period: "Fall 2023",
-    description: "Linux Task Configuration and Automation",
+    description: "Linux Configuration and C++ Automation",
+  },
+];
+
+const projects = [
+  {
+    link: "https://www.nmrk.com",
+    name: "Escape",
+    role: "Game Jam Submission",
+    period: "Winter 2024",
+    description: "Desktop-only platformer developed with Godot",
+  },
+  {
+    link: "https://github.com/availe/Expense-Tracker",
+    name: "Expense Tracker",
+    role: "Capstone Project",
+    period: "Fall 2023",
+    description: "JavaFX Application with Sqlite Database",
   },
 ];
 
@@ -41,7 +58,7 @@ export default function Home() {
           stringLink="/resume"
         />
         <SectionEntry
-          experiences={experiences}
+          experiences={projects}
           title="Projects"
           stringDesc="View Projects"
           stringLink="/projects"

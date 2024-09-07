@@ -2,8 +2,8 @@ import Link from "next/link";
 import ExperienceEntry from "./experience-entry";
 
 interface Experience {
-  companyLink: string;
-  companyName: string;
+  link: string;
+  name: string;
   role: string;
   period: string;
   description: string;
@@ -30,8 +30,8 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
         {experiences.map((exp, index) => (
           <ExperienceEntry
             key={index}
-            companyLink={exp.companyLink}
-            companyName={exp.companyName}
+            companyLink={exp.link}
+            companyName={exp.name}
             role={exp.role}
             period={exp.period}
             description={exp.description}
