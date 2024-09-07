@@ -11,12 +11,15 @@ interface Experience {
 
 interface ExperienceSectionProps {
   experiences: Experience[];
+  title: string;
+  stringDesc: string;
+  stringLink: string;
 }
 
-const SectionEntry: React.FC<ExperienceSectionProps> = ({ experiences }) => {
+const SectionEntry: React.FC<ExperienceSectionProps> = ({ experiences, title, stringDesc, stringLink }) => {
   return (
     <section>
-      <h2 className="text-2xl md:text-3xl ml-2">Experience</h2>
+      <h2 className="text-2xl md:text-3xl ml-2 pb-4">{title}</h2>
 
       <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start gap-16 md:gap-0">
         {experiences.map((exp, index) => (
@@ -30,9 +33,9 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({ experiences }) => {
           />
         ))}
       </div>
-      <div className="flex justify-center">
-        <p className="text-center hover:border-b inline-block">
-          <Link href="/resume">See all</Link>
+      <div className="flex justify-center pt-12">
+        <p className="text-center hover:border-b inline-block text-[#ec6240] hover:bg-[#ec6240] hover:text-white border-2 border-transparent px-8 py-2 rounded-lg ">
+          <Link href={stringLink}>{stringDesc}</Link>
         </p>
       </div>
     </section>
