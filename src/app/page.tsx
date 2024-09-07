@@ -16,15 +16,15 @@ const experiences = [
     companyName: "Newmark",
     role: "Software Engineer Intern",
     period: "Summer 2024",
-    description: "Angular and .NET Full Stack Web Development"
+    description: "Angular and .NET Full Stack Web Development",
   },
   {
     companyLink: "https://www.innovare.pe",
     companyName: "Innovare",
     role: "Linux Technician Intern",
     period: "Fall 2023",
-    description: "Linux Task Configuration and Automation"
-  }
+    description: "Linux Task Configuration and Automation",
+  },
 ];
 
 export default function Home() {
@@ -52,8 +52,8 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl ml-2">Experience</h2>
 
         <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start">
-        {experiences.map((exp, index) => (
-            <ExperienceEntry 
+          {experiences.map((exp, index) => (
+            <ExperienceEntry
               key={index}
               companyLink={exp.companyLink}
               companyName={exp.companyName}
@@ -63,7 +63,33 @@ export default function Home() {
             />
           ))}
         </div>
-        <p className="text-center hover:border-b inline-block"><Link href="/resume">See all</Link></p>
+        <div className="flex justify-center">
+          <p className="text-center hover:border-b inline-block">
+            <Link href="/resume">See all</Link>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl md:text-3xl ml-2">Projects</h2>
+
+        <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start">
+          {experiences.map((exp, index) => (
+            <ExperienceEntry
+              key={index}
+              companyLink={exp.companyLink}
+              companyName={exp.companyName}
+              role={exp.role}
+              period={exp.period}
+              description={exp.description}
+            />
+          ))}
+        </div>
+        <div className="flex justify-center">
+          <p className="text-center hover:border-b inline-block">
+            <Link href="/resume">See all</Link>
+          </p>
+        </div>
       </section>
     </>
   );
