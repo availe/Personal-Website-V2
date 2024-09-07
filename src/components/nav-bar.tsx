@@ -10,7 +10,7 @@ import NavbarSocialListItem from "./nav-bar-social-list-item";
 import { useState } from "react";
 
 export default function NavBar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const closeDrawer = () => setIsOpen(false);
 
   const navDict = [
@@ -64,7 +64,12 @@ export default function NavBar() {
               </DrawerTrigger>
               <ul className="pt-14 flex flex-col gap-6">
                 {navDict.map(({ href, text }, index) => (
-                  <NavbarListItem key={index} href={href} text={text} onItemClick={closeDrawer} />
+                  <NavbarListItem
+                    key={index}
+                    href={href}
+                    text={text}
+                    onItemClick={closeDrawer}
+                  />
                 ))}
                 {socialDict.map(({ href, icon, label }, index) => (
                   <NavbarSocialListItem
@@ -72,6 +77,7 @@ export default function NavBar() {
                     href={href}
                     icon={icon}
                     label={label}
+                    onItemClick={closeDrawer}
                   />
                 ))}
               </ul>
