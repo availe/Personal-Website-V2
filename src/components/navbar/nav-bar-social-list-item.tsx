@@ -14,7 +14,6 @@ const NavbarSocialListItem = ({
   label,
   onItemClick,
 }: NavbarSocialListItemProps) => {
-  const itemClass = `flex ml-10 gap-1 hover:border-b`;
 
   return (
     <a

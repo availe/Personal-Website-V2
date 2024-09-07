@@ -14,15 +14,17 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
   description,
 }) => {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
+        <div>
       <h2 className="text-2xl md:text-3xl hover:border-b inline-block">
         <a href={companyLink} target="_blank" rel="noopener noreferrer">
           {companyName}
         </a>
       </h2>
-      <p>
-        {role}, {period}
-      </p>
+    <p className="text-[#757775]">
+      {role}, {period}
+    </p>
+      </div>
       <p>{description}</p>
     </div>
   );
