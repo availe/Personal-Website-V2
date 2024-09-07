@@ -10,6 +10,23 @@ import {
 } from "@/components/ui/card";
 import ExperienceEntry from "@/components/home/experience-entry";
 
+const experiences = [
+  {
+    companyLink: "https://www.nmrk.com",
+    companyName: "Newmark",
+    role: "Software Engineer Intern",
+    period: "Summer 2024",
+    description: "Angular and .NET Full Stack Web Development"
+  },
+  {
+    companyLink: "https://www.innovare.pe",
+    companyName: "Innovare",
+    role: "Linux Technician Intern",
+    period: "Fall 2023",
+    description: "Linux Task Configuration and Automation"
+  }
+];
+
 export default function Home() {
   return (
     <>
@@ -34,21 +51,17 @@ export default function Home() {
       <section>
         <h2 className="text-2xl md:text-3xl">Experience</h2>
 
-        <div className="flex flex-col md:flex-row justify-evenly">
-        <ExperienceEntry 
-          companyLink="https://www.nmrk.com"
-          companyName="Newmark"
-          role="Software Engineer Intern"
-          period="Summer 2024"
-          description="Angular and .NET Full Stack Web Development"
-        />
-        <ExperienceEntry 
-          companyLink="https://www.innovare.pe"
-          companyName="Innovare"
-          role="Linux Technician Intern"
-          period="Fall 2023"
-          description="Linux Task Configuration and Automation"
-        />
+        <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start">
+        {experiences.map((exp, index) => (
+            <ExperienceEntry 
+              key={index}
+              companyLink={exp.companyLink}
+              companyName={exp.companyName}
+              role={exp.role}
+              period={exp.period}
+              description={exp.description}
+            />
+          ))}
         </div>
         <p className="text-center">See all</p>
       </section>
