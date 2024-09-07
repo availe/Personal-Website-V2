@@ -37,13 +37,13 @@ export default function Home() {
         <SectionEntry
           experiences={experiences}
           title="Experience"
-          stringDesc="View Full Resume"
+          stringDesc="View Resume"
           stringLink="/resume"
         />
         <SectionEntry
           experiences={experiences}
           title="Projects"
-          stringDesc="View All Projects"
+          stringDesc="View Projects"
           stringLink="/projects"
         />
       </div>

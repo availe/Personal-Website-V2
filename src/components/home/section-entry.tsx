@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import ExperienceEntry from './experience-entry';
+import Link from "next/link";
+import ExperienceEntry from "./experience-entry";
 
 interface Experience {
   companyLink: string;
@@ -16,7 +16,12 @@ interface ExperienceSectionProps {
   stringLink: string;
 }
 
-const SectionEntry: React.FC<ExperienceSectionProps> = ({ experiences, title, stringDesc, stringLink }) => {
+const SectionEntry: React.FC<ExperienceSectionProps> = ({
+  experiences,
+  title,
+  stringDesc,
+  stringLink,
+}) => {
   return (
     <section>
       <h2 className="text-2xl md:text-3xl ml-2 pb-4">{title}</h2>
@@ -34,7 +39,7 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({ experiences, title, st
         ))}
       </div>
       <div className="flex justify-center pt-12">
-        <p className="text-center hover:border-b inline-block text-[#ec6240] hover:bg-[#ec6240] hover:text-white border-2 border-transparent px-8 py-2 rounded-lg ">
+        <p className="text-center inline-block text-[#ec6240] hover:bg-[#ec6240] hover:text-white border-2 border-transparent hover:border-[#ec6240] px-4 py-2 rounded-lg transition-colors duration-100 ease-in-out">
           <Link href={stringLink}>{stringDesc}</Link>
         </p>
       </div>
