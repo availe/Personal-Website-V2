@@ -12,8 +12,8 @@ import {
 export default function Home() {
   return (
     <>
-      <main className="min-h-dvh bg-[url('/flat-mountains.svg')] bg-cover bg-center flex flex-col justify-center">
-        <section className="text-center flex flex-col gap-6 md:gap-8 md:mt-[-10dvh]">
+      <main className="min-h-svh bg-[url('/flat-mountains.svg')] bg-cover bg-center flex flex-col justify-center">
+        <section className="text-center flex flex-col gap-6 md:gap-8 md:mt-[-10svh]">
           <div className="flex flex-col gap-2">
             <h1 className="uppercase text-3xl md:text-5xl">
               Hello, I&apos;m Rafael Diaz
@@ -33,7 +33,7 @@ export default function Home() {
       <section>
         <h2 className="text-2xl md:text-3xl">Experience</h2>
 
-        <div className="flex justify-evenly">
+        <div className="flex flex-col md:flex-row justify-evenly">
           <div>
             <h2 className="text-2xl md:text-3xl">Newmark</h2>
             Software Engineer Intern, Summer 2024
