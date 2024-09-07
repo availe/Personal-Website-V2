@@ -48,49 +48,51 @@ export default function Home() {
         </section>
       </main>
 
-      <section>
-        <h2 className="text-2xl md:text-3xl ml-2">Experience</h2>
+      <div className="flex flex-col gap-20 pt-20 pb-10">
+        <section>
+          <h2 className="text-2xl md:text-3xl ml-2">Experience</h2>
 
-        <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start">
-          {experiences.map((exp, index) => (
-            <ExperienceEntry
-              key={index}
-              companyLink={exp.companyLink}
-              companyName={exp.companyName}
-              role={exp.role}
-              period={exp.period}
-              description={exp.description}
-            />
-          ))}
-        </div>
-        <div className="flex justify-center">
-          <p className="text-center hover:border-b inline-block">
-            <Link href="/resume">See all</Link>
-          </p>
-        </div>
-      </section>
+          <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start">
+            {experiences.map((exp, index) => (
+              <ExperienceEntry
+                key={index}
+                companyLink={exp.companyLink}
+                companyName={exp.companyName}
+                role={exp.role}
+                period={exp.period}
+                description={exp.description}
+              />
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <p className="text-center hover:border-b inline-block">
+              <Link href="/resume">See all</Link>
+            </p>
+          </div>
+        </section>
 
-      <section>
-        <h2 className="text-2xl md:text-3xl ml-2">Projects</h2>
+        <section>
+          <h2 className="text-2xl md:text-3xl ml-2">Projects</h2>
 
-        <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start">
-          {experiences.map((exp, index) => (
-            <ExperienceEntry
-              key={index}
-              companyLink={exp.companyLink}
-              companyName={exp.companyName}
-              role={exp.role}
-              period={exp.period}
-              description={exp.description}
-            />
-          ))}
-        </div>
-        <div className="flex justify-center">
-          <p className="text-center hover:border-b inline-block">
-            <Link href="/resume">See all</Link>
-          </p>
-        </div>
-      </section>
+          <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start">
+            {experiences.map((exp, index) => (
+              <ExperienceEntry
+                key={index}
+                companyLink={exp.companyLink}
+                companyName={exp.companyName}
+                role={exp.role}
+                period={exp.period}
+                description={exp.description}
+              />
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <p className="text-center hover:border-b inline-block">
+              <Link href="/resume">See all</Link>
+            </p>
+          </div>
+        </section>
+      </div>
     </>
   );
 }
