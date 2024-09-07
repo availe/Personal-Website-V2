@@ -1,7 +1,7 @@
 "use client";
 
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
 import { Link, MenuIcon, XIcon } from "lucide-react";
 import NavbarListItem from "./nav-bar-list-item";
 import { usePathname, useRouter } from "next/navigation";
