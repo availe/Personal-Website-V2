@@ -32,7 +32,7 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="fixed top-0 right-0 w-full md:bg-white z-10 md:p-2">
+    <header className="sticky top-0 right-0 w-full md:bg-white z-10 md:p-2">
       <nav className="relative">
         <div className="flex justify-between">
           <ul className="hidden md:flex flex-row justify-start pr-16 pt-1">
