@@ -7,9 +7,11 @@ import NavbarListItem from "./nav-bar-list-item";
 import { usePathname, useRouter } from "next/navigation";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import NavbarSocialListItem from "./nav-bar-social-list-item";
+import { useState } from "react";
 
 export default function NavBar() {
-  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false)
+  const closeDrawer = () => setIsOpen(false);
 
   const navDict = [
     { href: "/", text: "Home" },
@@ -52,7 +54,7 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="md:hidden">
-          <Drawer direction="right">
+          <Drawer direction="right" open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger className="focus:outline-none absolute right-0 top-0 p-4">
               <MenuIcon />
             </DrawerTrigger>
@@ -62,7 +64,7 @@ export default function NavBar() {
               </DrawerTrigger>
               <ul className="pt-14 flex flex-col gap-6">
                 {navDict.map(({ href, text }, index) => (
-                  <NavbarListItem key={index} href={href} text={text} />
+                  <NavbarListItem key={index} href={href} text={text} onItemClick={closeDrawer} />
                 ))}
                 {socialDict.map(({ href, icon, label }, index) => (
                   <NavbarSocialListItem
