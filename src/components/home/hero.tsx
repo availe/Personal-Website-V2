@@ -11,7 +11,7 @@ const Hero = () => {
           </p>
         </div>
         <Link href="/about">
-          <button className="bg-blue-600 hover:bg-blue-500 text-white md:text-xl font-semibold py-2 px-4 rounded">
+          <button className="bg-blue-600 hover:bg-blue-500 text-white md:text-xl py-2 px-4 rounded">
             About Me
           </button>
         </Link>
