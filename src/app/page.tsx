@@ -26,12 +26,13 @@ const experiences = [
     role: "Linux Technician Intern",
     period: "Fall 2023",
     description: "Linux Configuration and C++ Automation",
+    callToAction: "View Company",
   },
 ];
 
 const projects = [
   {
-    link: "https://www.nmrk.com",
+    link: "https://github.com/availe/",
     name: "Escape",
     role: "Game Jam Submission",
     period: "Winter 2024",
@@ -56,12 +57,14 @@ export default function Home() {
           title="Experience"
           stringDesc="View Resume"
           stringLink="/resume"
+          callToAction="View Company"
         />
         <SectionEntry
           experiences={projects}
           title="Projects"
           stringDesc="View Projects"
           stringLink="/projects"
+          callToAction="View Project"
         />
       </div>
     </>

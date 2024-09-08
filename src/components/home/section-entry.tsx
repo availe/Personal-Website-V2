@@ -14,6 +14,7 @@ interface ExperienceSectionProps {
   title: string;
   stringDesc: string;
   stringLink: string;
+  callToAction: string;
 }
 
 const SectionEntry: React.FC<ExperienceSectionProps> = ({
@@ -21,6 +22,7 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
   title,
   stringDesc,
   stringLink,
+  callToAction,
 }) => {
   return (
     <section>
@@ -30,11 +32,12 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
         {experiences.map((exp, index) => (
           <ExperienceEntry
             key={index}
-            companyLink={exp.link}
-            companyName={exp.name}
+            link={exp.link}
+            name={exp.name}
             role={exp.role}
             period={exp.period}
             description={exp.description}
+            callToAction={callToAction}
           />
         ))}
       </div>

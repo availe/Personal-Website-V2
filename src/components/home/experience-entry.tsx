@@ -1,31 +1,34 @@
 interface ExperienceEntryProps {
-  companyLink: string;
-  companyName: string;
+  link: string;
+  name: string;
   role: string;
   period: string;
   description: string;
+  callToAction: string;
 }
 
 const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
-  companyLink,
-  companyName,
+  link,
+  name,
   role,
   period,
   description,
+  callToAction,
 }) => {
   return (
     <div className="flex flex-col gap-2">
-        <div>
-      <h2 className="text-2xl md:text-3xl hover:border-b inline-block">
-        <a href={companyLink} target="_blank" rel="noopener noreferrer">
-          {companyName}
-        </a>
-      </h2>
-    <p className="text-[#757775]">
-      {role}, {period}
-    </p>
+      <div>
+        <h2 className="text-2xl md:text-3xl inline-block">{name}</h2>
+        <p className="text-[#757775]">
+          {role}, {period}
+        </p>
       </div>
       <p>{description}</p>
+      <div className="flex justify-end pt-2">
+      <button className="inline-block bg-blue-600 hover:bg-blue-500 text-white py-1 px-2 rounded">
+      <a href={link} target="_blank" rel="noopener noreferrer">{callToAction}</a>
+      </button>
+      </div>
     </div>
   );
 };
