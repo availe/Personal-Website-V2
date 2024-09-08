@@ -50,8 +50,8 @@ const projects = [
 export default function Home() {
   return (
     <>
+    <div className="flex flex-col gap-6">
       <Hero />
-      <div className="flex flex-col gap-20 pt-20">
         <SectionEntry
           experiences={experiences}
           title="Experience"

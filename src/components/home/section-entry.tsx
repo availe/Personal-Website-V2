@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ExperienceEntry from "./experience-entry";
+import { Card, CardHeader, CardContent, CardFooter } from "../ui/card";
 
 interface Experience {
   link: string;
@@ -25,10 +26,11 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
   callToAction,
 }) => {
   return (
-    <section>
-      <h2 className="text-2xl md:text-3xl ml-2 pb-4">{title}</h2>
-
-      <div className="flex flex-col md:flex-row justify-evenly text-center md:text-start gap-16 md:gap-0">
+    <Card className="md:ml-10 md:mr-10">
+      <CardHeader>
+        <h2 className="text-2xl md:text-3xl ml-2">{title}</h2>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-6 md:flex-row justify-evenly">
         {experiences.map((exp, index) => (
           <ExperienceEntry
             key={index}
@@ -40,13 +42,13 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
             callToAction={callToAction}
           />
         ))}
-      </div>
-      <div className="flex justify-center pt-12">
+      </CardContent>
+      <CardFooter className="flex justify-center">
         <p className="text-center inline-block text-[#ec6240] hover:bg-[#ec6240] hover:text-white border-2 border-transparent hover:border-[#ec6240] px-4 py-2 rounded-lg transition-colors duration-100 ease-in-out">
           <Link href={stringLink}>{stringDesc}</Link>
         </p>
-      </div>
-    </section>
+      </CardFooter>
+    </Card>
   );
 };
 
