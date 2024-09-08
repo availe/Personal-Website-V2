@@ -20,7 +20,7 @@ const resumeData = {
         company: "Newmark",
         role: "Software Engineering Intern",
         location: "Manhattan, NY",
-        duration: "Jun 2024 — Aug 2024",
+        duration: "Jun 2024 – Aug 2024",
         responsibilities: [
           "Collaborated closely with 20+ engineers on an internal project utilized by Quality Control team",
           "Designed and implemented an Angular front-end view for managing web crawling operations.",
@@ -34,7 +34,7 @@ const resumeData = {
         company: "Innovare",
         role: "Linux Technician Intern",
         location: "Remote, Peru",
-        duration: "Sep 2023 — Nov 2023",
+        duration: "Sep 2023 – Nov 2023",
         responsibilities: [
           "Migrated dozens of servers to utilize Sophos Central for end-point security, reducing infrastructure costs while streamlining security management.",
           "Configured repository files for new server installations, setting up hostnames and IP ranges.",
@@ -46,7 +46,7 @@ const resumeData = {
         company: "Blackfacts",
         role: "Wordpress and Web Design Intern",
         location: "Remote, US",
-        duration: "Jul 2023 — Aug 2023",
+        duration: "Jul 2023 – Aug 2023",
         responsibilities: [
           "Assisted implementing the 'Blackfacts for Schools' landing page utilizing WordPress and Elementor.",
           "Utilized Elementor to create a video showcase on the Blackfacts for Schools landing page.",
@@ -67,7 +67,7 @@ const resumeData = {
       {
         title: "Expense Tracker",
         technologies: ["Java", "JavaFX", "Scene Builder", "Sqlite", "Maven"],
-        date: "Nov 2023 — Dec 2023",
+        date: "Nov 2023 – Dec 2023",
         description: [
           "Designed a multi-scene expense tracker application with embedded database for persistent memory.",
           "Leveraged Scene Builder to build an interactive expense table with functionalities such as adding, removing, and sorting expenses.",

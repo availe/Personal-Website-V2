@@ -12,7 +12,7 @@ export default function ResumePage() {
           <p className="font-semibold">
             {resumeData.education.school}{" "}
             <span className="font-normal">
-              - {resumeData.education.degree},{" "}
+              &ndash; {resumeData.education.degree},{" "}
               {resumeData.education.graduationDate}
             </span>
           </p>
