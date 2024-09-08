@@ -48,6 +48,13 @@ export default function Home() {
           stringLink="/projects"
           callToAction="View Project"
         />
+        <SectionEntry
+          experiences={experiences}
+          title="Experience"
+          stringDesc="View Resume"
+          stringLink="/resume"
+          callToAction="View Company"
+        />
       </div>
     </>
   );
