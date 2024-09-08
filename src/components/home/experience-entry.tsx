@@ -25,7 +25,7 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
       </div>
       <p>{description}</p>
       <div className="flex justify-center md:justify-end pt-2">
-        <button className="w-[80%] md:w-auto bg-blue-600 hover:bg-blue-500 text-white py-1 px-2 rounded">
+        <button className="w-[10rem] bg-blue-600 hover:bg-blue-500 text-white py-1 px-2 rounded">
           <a href={link} target="_blank" rel="noopener noreferrer">
             {callToAction}
           </a>
