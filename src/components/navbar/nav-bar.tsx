@@ -15,7 +15,6 @@ export default function NavBar() {
 
   const navDict = [
     { href: "/", text: "Home" },
-    { href: "/about", text: "About" },
     { href: "/projects", text: "Projects" },
     { href: "/resume", text: "Resume" },
   ];

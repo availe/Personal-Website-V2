@@ -1,14 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
-import ExperienceEntry from "@/components/home/experience-entry";
+
 import SectionEntry from "@/components/home/section-entry";
 import Hero from "@/components/home/hero";
 

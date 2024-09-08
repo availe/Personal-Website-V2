@@ -10,9 +10,9 @@ const Hero = () => {
             Prev. Software Engineering Intern at Newmark
           </p>
         </div>
-        <Link href="/about">
+        <Link href="/resume">
           <button className="bg-blue-600 hover:bg-blue-500 text-white md:text-xl py-2 px-4 rounded">
-            About Me
+            View Resume
           </button>
         </Link>
       </section>
