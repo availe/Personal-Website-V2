@@ -4,7 +4,7 @@ export default function ResumePage() {
   const headerStyle = "text-xl font-bold border-b-2 border-gray-600";
 
   return (
-    <div className="container mx-auto px-8 pt-12 md:pt-8">
+    <div className="container mx-auto px-8 pt-12 md:pt-8 flex flex-col gap-8">
       {/* Education Section */}
       <section>
         <h2 className={headerStyle}>Education</h2>
@@ -21,7 +21,7 @@ export default function ResumePage() {
       </section>
 
       {/* Technical Skills Section */}
-      <section className="mt-8">
+      <section>
         <h2 className={headerStyle}>Technical Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div className="contents md:block">
@@ -47,7 +47,7 @@ export default function ResumePage() {
       </section>
 
       {/* Internship Experience Section */}
-      <section className="mt-8">
+      <section>
         <h2 className={headerStyle}>Internship Experience</h2>
         {resumeData.experience.map((exp, index) => (
           <div key={index} className="mt-4">
@@ -67,7 +67,7 @@ export default function ResumePage() {
       </section>
 
       {/* Projects Section */}
-      <section className="mt-8">
+      <section>
         <h2 className={headerStyle}>Projects</h2>
         {resumeData.projects.map((project, index) => (
           <div key={index} className="mt-4">
@@ -85,6 +85,12 @@ export default function ResumePage() {
           </div>
         ))}
       </section>
+
+      <div className="flex justify-center">
+        <span className="text-center text-sm text-[#ec6240] transition-colors duration-100 ease-in-out">
+          Download as PDF
+        </span>
+      </div>
     </div>
   );
 }
