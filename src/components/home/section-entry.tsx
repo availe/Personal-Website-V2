@@ -44,9 +44,9 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
         ))}
       </CardContent>
       <CardFooter className="flex justify-center">
-        <p className="text-center inline-block text-[#ec6240] hover:bg-[#ec6240] hover:text-white border-2 border-transparent hover:border-[#ec6240] px-4 py-2 rounded-lg transition-colors duration-100 ease-in-out">
+        <span className="text-center text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out">
           <Link href={stringLink}>{stringDesc}</Link>
-        </p>
+        </span>
       </CardFooter>
     </Card>
   );

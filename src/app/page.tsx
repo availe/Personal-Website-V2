@@ -1,4 +1,3 @@
-
 import SectionEntry from "@/components/home/section-entry";
 import Hero from "@/components/home/hero";
 
@@ -40,8 +39,8 @@ const projects = [
 export default function Home() {
   return (
     <>
-    <div className="flex flex-col gap-6">
-      <Hero />
+      <div className="flex flex-col gap-6">
+        <Hero />
         <SectionEntry
           experiences={experiences}
           title="Experience"

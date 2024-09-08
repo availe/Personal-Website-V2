@@ -87,7 +87,7 @@ export default function ResumePage() {
       </section>
 
       <div className="flex justify-center">
-        <span className="text-center text-sm text-[#ec6240] transition-colors duration-100 ease-in-out">
+        <span className="text-center text-sm text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out">
           Download as PDF
         </span>
       </div>
