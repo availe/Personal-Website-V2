@@ -28,9 +28,9 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
   return (
     <Card className="md:ml-10 md:mr-10">
       <CardHeader>
-        <h2 className="text-2xl md:text-3xl ml-2">{title}</h2>
+        <h2 className="text-2xl md:text-3xl">{title}</h2>
       </CardHeader>
-      <CardContent className="flex flex-col gap-6 md:flex-row justify-evenly">
+      <CardContent className="flex flex-col md:flex-row justify-evenly">
         {experiences.map((exp, index) => (
           <ExperienceEntry
             key={index}
