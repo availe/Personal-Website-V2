@@ -42,13 +42,6 @@ export default function Home() {
       <div className="flex flex-col gap-6">
         <Hero />
         <SectionEntry
-          experiences={experiences}
-          title="Experience"
-          stringDesc="View Resume"
-          stringLink="/resume"
-          callToAction="View Company"
-        />
-        <SectionEntry
           experiences={projects}
           title="Projects"
           stringDesc="View Projects"
