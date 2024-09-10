@@ -60,7 +60,6 @@ const TextSection = ({
           <a
             href={codeUrl}
             className="text-center text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out"
-            // target="_blank"
             rel="noopener noreferrer"
           >
             View Code
@@ -81,28 +80,19 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   imageLeft = true,
 }) => (
   <div className="flex flex-col container mx-auto">
-    <section aria-labelledby="project-title" className="flex flex-col lg:flex-row w-full">
-      {imageLeft ? (
-        <>
-          <ImageSection src={imageSrc} alt={imageAlt} />
-          <TextSection
-            title={projectName}
-            description={projectDescription}
-            details={projectDetails}
-            codeUrl={codeUrl}
-          />
-        </>
-      ) : (
-        <>
-          <TextSection
-            title={projectName}
-            description={projectDescription}
-            details={projectDetails}
-            codeUrl={codeUrl}
-          />
-          <ImageSection src={imageSrc} alt={imageAlt} />
-        </>
-      )}
+    <section
+      aria-labelledby="project-title"
+      className={`flex flex-col lg:flex-row w-full ${
+        imageLeft ? "" : "lg:flex-row-reverse"
+      }`}
+    >
+      <ImageSection src={imageSrc} alt={imageAlt} />
+      <TextSection
+        title={projectName}
+        description={projectDescription}
+        details={projectDetails}
+        codeUrl={codeUrl}
+      />
     </section>
   </div>
 );
