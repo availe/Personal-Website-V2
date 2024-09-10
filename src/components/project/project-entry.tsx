@@ -21,11 +21,10 @@ interface ProjectEntryProps {
 const ImageSection = ({ src, alt }: { src: string; alt: string }) => (
   <div className="w-full lg:w-1/2 flex justify-center p-8">
     <figure className="flex flex-col justify-center items-center">
-      <Image
+      <img
         src={src}
         alt={alt}
-        width="572"
-        height="272"
+        className="w-auto h-auto"
         style={{ objectFit: "contain" }}
       />
       <figcaption className="text-center mt-2">{alt}</figcaption>
@@ -82,7 +81,7 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   <div className="flex flex-col container mx-auto">
     <section
       aria-labelledby="project-title"
-      className={`flex flex-col lg:flex-row w-full ${
+      className={`flex flex-col lg:flex-row w-full items-center ${
         imageLeft ? "" : "lg:flex-row-reverse"
       }`}
     >
