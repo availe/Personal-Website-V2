@@ -1,40 +1,14 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardFooter,
-} from "@/components/ui/card";
-import Image from "next/image";
+import ProjectEntry from "@/components/project/project-entry";
+import ProjectsData from "./project-data";
 
-export default function ProjectsPage() {
+const ProjectsPage = () => {
   return (
-    <Card className="flex flex-col">
-      <CardHeader className="flex w-full justify-center p-4">
-        <h2 className="text-2xl">Projects</h2>
-      </CardHeader>
-      <CardContent className="flex">
-        <div className="w-1/2 flex justify-center">
-          <figure>
-            <Image
-              src="/expense-tracker-mockup.svg"
-              alt="Expense Tracker Mockup"
-              width="572"
-              height="272"
-              style={{ objectFit: "contain" }}
-            />
-            <figcaption className="text-center mt-2">
-              Figma mockup of project
-            </figcaption>
-          </figure>
-        </div>
-        <div className="w-1/2 flex flex-col p-4">
-          <h2 className="text-2xl">Expense Tracker</h2>
-          <p>Details.</p>
-        </div>
-      </CardContent>
-      <CardFooter className="flex justify-center p-4">
-        <p>Link.</p>
-      </CardFooter>
-    </Card>
+    <div className="container mx-auto flex flex-col gap-48 pt-12">
+      {Object.entries(ProjectsData).map(([key, project], index) => (
+        <ProjectEntry key={key} {...project} imageLeft={index % 2 === 0} />
+      ))}
+    </div>
   );
-}
+};
+
+export default ProjectsPage;
