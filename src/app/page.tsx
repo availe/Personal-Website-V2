@@ -41,20 +41,22 @@ export default function Home() {
     <>
       <div className="flex flex-col gap-6">
         <Hero />
-        <SectionEntry
-          experiences={projects}
-          title="Projects"
-          stringDesc="View Projects"
-          stringLink="/projects"
-          callToAction="View Project"
-        />
-        <SectionEntry
-          experiences={experiences}
-          title="Experience"
-          stringDesc="View Resume"
-          stringLink="/resume"
-          callToAction="View Company"
-        />
+        <div className="flex flex-col xl:flex-row xl:justify-evenly xl:mx-12 gap-6 xl:gap-12">
+          <SectionEntry
+            experiences={projects}
+            title="Projects"
+            stringDesc="View Projects"
+            stringLink="/projects"
+            callToAction="View Project"
+          />
+          <SectionEntry
+            experiences={experiences}
+            title="Experience"
+            stringDesc="View Resume"
+            stringLink="/resume"
+            callToAction="View Company"
+          />
+        </div>
       </div>
     </>
   );
