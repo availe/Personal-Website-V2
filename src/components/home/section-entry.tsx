@@ -26,7 +26,7 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
   callToAction,
 }) => {
   return (
-    <Card className="flex flex-col gap-4 w-full lg:border-none lg:shadow-none">
+    <Card className="flex flex-col gap-4 w-full md:border-none md:shadow-none">
       <CardHeader>
         <h2 className="text-2xl md:text-3xl">{title}</h2>
       </CardHeader>
