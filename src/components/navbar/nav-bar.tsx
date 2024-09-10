@@ -12,7 +12,6 @@ import { useState } from "react";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const closeDrawer = () => setIsOpen(false);
-  const pathname = usePathname();
 
   const navDict = [
     { href: "/", text: "Home" },
@@ -39,7 +38,7 @@ export default function NavBar() {
         <div className="flex justify-between">
           <ul className="hidden md:flex flex-row justify-start pr-16 pt-1">
             {navDict.map(({ href, text }, index) => (
-              <NavbarListItem key={index} href={href} text={text} isCurrent={pathname === href} />
+              <NavbarListItem key={index} href={href} text={text} />
             ))}
           </ul>
           <ul className="hidden md:flex gap-6 pr-10">
@@ -49,7 +48,6 @@ export default function NavBar() {
                 href={href}
                 icon={icon}
                 label={label}
-
               />
             ))}
           </ul>
@@ -70,7 +68,6 @@ export default function NavBar() {
                     href={href}
                     text={text}
                     onItemClick={closeDrawer}
-                    isCurrent={false}
                   />
                 ))}
                 {socialDict.map(({ href, icon, label }, index) => (

@@ -3,12 +3,11 @@ import Link from "next/link";
 interface NavbarListItemProps {
   href: string;
   text: string;
-  isCurrent: boolean;
   onItemClick?: () => void;
 }
 
-const NavbarListItem = ({ href, text, isCurrent, onItemClick }: NavbarListItemProps) => {
-  const itemClass = `text-xl ml-10 ${isCurrent ? 'border-b' : 'hover:border-b'}`;
+const NavbarListItem = ({ href, text, onItemClick }: NavbarListItemProps) => {
+  const itemClass = `text-xl hover:border-b ml-10`;
 
   return (
     <Link href={href}>
