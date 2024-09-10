@@ -41,7 +41,7 @@ export default function Home() {
     <>
       <div className="flex flex-col gap-6">
         <Hero />
-        <div className="flex flex-col xl:flex-row xl:justify-evenly xl:mx-12 gap-6 xl:gap-12">
+        <div className="flex flex-col lg:flex-row lg:justify-evenly lg:mx-12 gap-6 lg:gap-12">
           <SectionEntry
             experiences={projects}
             title="Projects"
