@@ -41,7 +41,7 @@ const callToActionLink = (isInternal: boolean, codeUrl: string) => {
 
   return isInternal ? (
     <Link href={codeUrl} passHref>
-      <span className={linkClass}>View Code</span>
+      <span className={linkClass}>View Project</span>
     </Link>
   ) : (
     <a
@@ -50,7 +50,7 @@ const callToActionLink = (isInternal: boolean, codeUrl: string) => {
       rel="noopener noreferrer"
       className={linkClass}
     >
-      View Code
+      View Code in GitHub
     </a>
   );
 };
