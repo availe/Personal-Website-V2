@@ -19,7 +19,7 @@ interface ProjectEntryProps {
 }
 
 const ImageSection = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="w-1/2 flex justify-center">
+  <div className="w-1/2 flex justify-center p-8">
     <figure>
       <Image
         src={src}
