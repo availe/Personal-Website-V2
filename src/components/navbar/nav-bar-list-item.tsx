@@ -7,7 +7,7 @@ interface NavbarListItemProps {
 }
 
 const NavbarListItem = ({ href, text, onItemClick }: NavbarListItemProps) => {
-  const itemClass = `text-xl hover:border-b ml-10`;
+  const itemClass = `text-xl border-b border-transparent hover:border-b-gray-200 ml-10`;
 
   return (
     <Link href={href}>

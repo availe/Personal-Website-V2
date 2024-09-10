@@ -16,7 +16,7 @@ const NavbarSocialListItem = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center ml-10 gap-1 hover:border-b"
+      className="flex items-center ml-10 gap-1 border-b border-transparent hover:border-b-gray-200"
       onClick={onItemClick}
     >
       <Icon className="w-8 h-8" />
