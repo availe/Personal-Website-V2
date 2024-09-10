@@ -50,7 +50,7 @@ const TextSection = ({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex flex-col gap-3">
         {details.map((detail, index) => (
           <p key={index}>{detail}</p>
         ))}
