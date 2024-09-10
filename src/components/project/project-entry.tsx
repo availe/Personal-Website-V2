@@ -82,7 +82,7 @@ const TextSection = ({
         ))}
       </CardContent>
       {codeUrl && (
-        <CardFooter className={`flex ${imageLeft ? "" : "lg:flex-row-reverse"}`}>
+        <CardFooter className={`flex justify-center ${imageLeft ? "lg:justify-start" : "lg:justify-end"}`}>
           {callToActionLink(isInternal, codeUrl)}
         </CardFooter>
       )}
