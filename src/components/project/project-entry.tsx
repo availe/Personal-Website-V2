@@ -19,7 +19,7 @@ interface ProjectEntryProps {
 }
 
 const ImageSection = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="w-1/2 flex justify-center p-8">
+  <div className="w-full md:w-1/2 flex justify-center p-8">
     <figure className="flex flex-col justify-center items-center">
       <Image
         src={src}
@@ -44,7 +44,7 @@ const TextSection = ({
   details: string[];
   codeUrl?: string;
 }) => (
-  <div className="w-1/2">
+  <div className="w-full md:w-1/2">
     <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
@@ -81,7 +81,7 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   imageLeft = true,
 }) => (
   <div className="flex flex-col container mx-auto">
-    <section aria-labelledby="project-title" className="flex w-full">
+    <section aria-labelledby="project-title" className="flex flex-col md:flex-row w-full">
       {imageLeft ? (
         <>
           <ImageSection src={imageSrc} alt={imageAlt} />
