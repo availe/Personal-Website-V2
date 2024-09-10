@@ -44,7 +44,7 @@ const TextSection = ({
   details: string[];
   codeUrl?: string;
 }) => (
-  <div className="w-full lg:w-1/2">
+  <div className="w-full lg:w-1/2 lg:pt-8">
     <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
