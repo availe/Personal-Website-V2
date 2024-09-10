@@ -1,6 +1,3 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-
 interface NavbarSocialListItemProps {
   href: string;
   label: string;
@@ -14,13 +11,12 @@ const NavbarSocialListItem = ({
   label,
   onItemClick,
 }: NavbarSocialListItemProps) => {
-
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex ml-10 gap-1 hover:border-b"
+      className="flex items-center ml-10 gap-1 hover:border-b"
       onClick={onItemClick}
     >
       <Icon className="w-8 h-8" />
