@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 interface ProjectEntryProps {
   imageSrc: string;
@@ -14,8 +15,9 @@ interface ProjectEntryProps {
   projectName: string;
   projectDescription: string;
   projectDetails: string[];
-  codeUrl?: string;
-  imageLeft?: boolean;
+  codeUrl: string;
+  imageLeft: boolean;
+  isInternal: boolean;
 }
 
 const ImageSection = ({ src, alt }: { src: string; alt: string }) => (
@@ -33,16 +35,40 @@ const ImageSection = ({ src, alt }: { src: string; alt: string }) => (
   </div>
 );
 
+const callToActionLink = (isInternal: boolean, codeUrl: string) => {
+  const linkClass =
+    "text-center text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out";
+
+  return isInternal ? (
+    <Link href={codeUrl} passHref>
+      <span className={linkClass}>View Code</span>
+    </Link>
+  ) : (
+    <a
+      href={codeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={linkClass}
+    >
+      View Code
+    </a>
+  );
+};
+
 const TextSection = ({
   title,
   description,
   details,
   codeUrl,
+  isInternal,
+  imageLeft,
 }: {
   title: string;
   description: string;
   details: string[];
-  codeUrl?: string;
+  codeUrl: string;
+  isInternal: boolean;
+  imageLeft: boolean;
 }) => (
   <div className="w-full lg:w-1/2 lg:pt-8">
     <Card>
@@ -56,14 +82,8 @@ const TextSection = ({
         ))}
       </CardContent>
       {codeUrl && (
-        <CardFooter>
-          <a
-            href={codeUrl}
-            className="text-center text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out"
-            rel="noopener noreferrer"
-          >
-            View Code
-          </a>
+        <CardFooter className={`flex ${imageLeft ? "" : "lg:flex-row-reverse"}`}>
+          {callToActionLink(isInternal, codeUrl)}
         </CardFooter>
       )}
     </Card>
@@ -78,6 +98,7 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   projectDetails,
   codeUrl,
   imageLeft = true,
+  isInternal,
 }) => (
   <div className="flex flex-col container mx-auto">
     <section
@@ -92,6 +113,8 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
         description={projectDescription}
         details={projectDetails}
         codeUrl={codeUrl}
+        isInternal={isInternal}
+        imageLeft={imageLeft}
       />
     </section>
   </div>
