@@ -26,11 +26,11 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
   callToAction,
 }) => {
   return (
-    <Card className="flex flex-col w-full md:border-none md:shadow-none">
+    <Card className="flex flex-col w-full lg:border-none lg:shadow-none">
       <CardHeader>
-        <h2 className="text-2xl md:text-3xl">{title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-center">{title}</h2>
       </CardHeader>
-      <CardContent className="flex flex-col gap-12">
+      <CardContent className="flex flex-col gap-12 pt-12 pb-12">
         {experiences.map((exp, index) => (
           <ExperienceEntry
             key={index}
@@ -43,7 +43,7 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
           />
         ))}
       </CardContent>
-      <CardFooter className="flex justify-center pt-6">
+      <CardFooter className="flex justify-center">
         <span className="text-center text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out">
           <Link href={stringLink}>{stringDesc}</Link>
         </span>
