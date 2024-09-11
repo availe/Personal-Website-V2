@@ -12,7 +12,7 @@ const Hero = () => {
           </p>
         </div>
         <Link href="/resume">
-          <Button variant="default" className="bg-blue-600 hover:bg-blue-500">
+          <Button variant="default" className="bg-blue-600 hover:bg-blue-500 md:text-lg">
             View Resume
           </Button>
         </Link>
