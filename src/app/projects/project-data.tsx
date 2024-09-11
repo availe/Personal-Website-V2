@@ -10,7 +10,7 @@ interface ProjectData {
 
 const ProjectsData: ProjectData[] = [
   {
-    imageSrc: "/expense-tracker-mockup.svg",
+    imageSrc: "/escape-mockup.svg",
     imageAlt: "Expense Tracker Mockup",
     projectName: "Escape - Desktop Only",
     projectDescription:
