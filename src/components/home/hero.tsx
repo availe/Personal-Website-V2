@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
@@ -11,9 +12,9 @@ const Hero = () => {
           </p>
         </div>
         <Link href="/resume">
-          <button className="bg-blue-600 hover:bg-blue-500 text-white md:text-xl py-2 px-4 rounded">
+          <Button variant="default" className="bg-blue-600 hover:bg-blue-500">
             View Resume
-          </button>
+          </Button>
         </Link>
       </section>
     </main>
