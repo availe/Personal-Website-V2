@@ -10,7 +10,7 @@ interface ProjectData {
 
 const ProjectsData: ProjectData[] = [
   {
-    imageSrc: "/escape-mockup.svg",
+    imageSrc: "/escape-mockup.webp",
     imageAlt: "Expense Tracker Mockup",
     projectName: "Escape - Desktop Only",
     projectDescription:
@@ -23,7 +23,7 @@ const ProjectsData: ProjectData[] = [
     isInternal: true,
   },
   {
-    imageSrc: "/expense-tracker-mockup.svg",
+    imageSrc: "/expense-tracker-mockup.webp",
     imageAlt: "Expense Tracker Mockup",
     projectName: "Expense Tracker",
     projectDescription:
