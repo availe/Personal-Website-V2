@@ -23,7 +23,7 @@ const ProjectsData: ProjectData[] = [
     isInternal: true,
   },
   {
-    imageSrc: "/expense-tracker-mockup.webp",
+    imageSrc: "/expense-tracker-mockup.svg",
     imageAlt: "Expense Tracker Mockup",
     projectName: "Expense Tracker",
     projectDescription:
