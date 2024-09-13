@@ -20,14 +20,17 @@ interface ProjectEntryProps {
   isInternal: boolean;
 }
 
-const ImageSection = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="w-full lg:w-1/2 flex justify-center p-8">
-    <figure className="flex flex-col justify-center items-center">
+const ImageSection = ({ src, alt, imageLeft }: { src: string; alt: string; imageLeft: boolean }) => (
+  <div
+    className={`flex justify-center items-center p-8 ${imageLeft ? "order-1" : "order-2"}`}
+    style={{ maxWidth: "600px", width: "100%" }}
+  >
+    <figure className="relative w-full h-full">
       <Image
         src={src}
         alt={alt}
-        width="572"
-        height="272"
+        width={572}
+        height={272}
         style={{ objectFit: "contain" }}
       />
       <figcaption className="text-center mt-2">{alt}</figcaption>
@@ -70,19 +73,22 @@ const TextSection = ({
   isInternal: boolean;
   imageLeft: boolean;
 }) => (
-  <div className="w-full lg:w-1/2 lg:pt-8">
-    <Card>
+  <div
+    className={`flex justify-center items-center p-8 ${imageLeft ? "order-2" : "order-1"}`}
+    style={{ maxWidth: "600px", width: "100%" }}
+  >
+    <Card className="flex flex-col w-full">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col gap-3">
+      <CardContent className="flex-1 grid grid-flow-row gap-3">
         {details.map((detail, index) => (
           <p key={index}>{detail}</p>
         ))}
       </CardContent>
       {codeUrl && (
-        <CardFooter className={`flex justify-center ${imageLeft ? "lg:justify-start" : "lg:justify-end"}`}>
+        <CardFooter className="flex justify-center lg:justify-end">
           {callToActionLink(isInternal, codeUrl)}
         </CardFooter>
       )}
@@ -100,14 +106,12 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   imageLeft = true,
   isInternal,
 }) => (
-  <div className="flex flex-col container mx-auto">
+  <div className="container mx-auto flex justify-center">
     <section
       aria-labelledby="project-title"
-      className={`flex flex-col lg:flex-row w-full ${
-        imageLeft ? "" : "lg:flex-row-reverse"
-      }`}
+      className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
     >
-      <ImageSection src={imageSrc} alt={imageAlt} />
+      <ImageSection src={imageSrc} alt={imageAlt} imageLeft={imageLeft} />
       <TextSection
         title={projectName}
         description={projectDescription}
