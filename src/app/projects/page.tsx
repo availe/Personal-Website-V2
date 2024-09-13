@@ -1,4 +1,4 @@
-import ProjectEntry from "@/components/project/project-entry";
+import ProjectEntry from "@/components/project-entry.tsx/project-entry";
 import ProjectsData from "../../data/txt/project-data";
 
 const ProjectsPage = () => {
