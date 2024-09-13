@@ -20,9 +20,19 @@ interface ProjectEntryProps {
   isInternal: boolean;
 }
 
-const ImageSection = ({ src, alt, imageLeft }: { src: string; alt: string; imageLeft: boolean }) => (
+const ImageSection = ({
+  src,
+  alt,
+  imageLeft,
+}: {
+  src: string;
+  alt: string;
+  imageLeft: boolean;
+}) => (
   <div
-    className={`flex justify-center items-center p-8 ${imageLeft ? "order-1" : "order-2"}`}
+    className={`flex justify-center items-center p-8 ${
+      imageLeft ? "lg:order-1" : "lg:order-2"
+    }`}
     style={{ maxWidth: "600px", width: "100%" }}
   >
     <figure className="relative w-full h-full">
@@ -64,17 +74,15 @@ const TextSection = ({
   details,
   codeUrl,
   isInternal,
-  imageLeft,
 }: {
   title: string;
   description: string;
   details: string[];
   codeUrl: string;
   isInternal: boolean;
-  imageLeft: boolean;
 }) => (
   <div
-    className={`flex justify-center items-center p-8 ${imageLeft ? "order-2" : "order-1"}`}
+    className={`flex justify-center items-center p-8`}
     style={{ maxWidth: "600px", width: "100%" }}
   >
     <Card className="flex flex-col w-full">
@@ -118,7 +126,6 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
         details={projectDetails}
         codeUrl={codeUrl}
         isInternal={isInternal}
-        imageLeft={imageLeft}
       />
     </section>
   </div>
