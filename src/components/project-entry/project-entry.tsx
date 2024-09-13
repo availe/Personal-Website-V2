@@ -2,7 +2,7 @@ import { ImageSection } from "./image-section";
 import { ProjectEntryProps } from "./project-entry-props";
 import { TextSection } from "./text-section";
 
-const ProjectEntry: React.FC<ProjectEntryProps> = ({
+const ProjectEntry: React.FC<ProjectEntryProps > = ({
   imageSrc,
   imageAlt,
   projectName,
@@ -12,10 +12,9 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   imageLeft = true,
   isInternal,
 }) => (
-  <div className="container mx-auto flex justify-center">
     <section
       aria-labelledby="project-title"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
+      className="container mx-auto flex justify-center grid grid-cols-1 lg:grid-cols-2 items-center"
     >
       <ImageSection src={imageSrc} alt={imageAlt} imageLeft={imageLeft} />
       <TextSection
@@ -26,7 +25,6 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
         isInternal={isInternal}
       />
     </section>
-  </div>
 );
 
 export default ProjectEntry;
