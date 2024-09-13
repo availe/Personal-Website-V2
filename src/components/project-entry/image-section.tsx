@@ -15,7 +15,6 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
     className={`flex justify-center items-center p-8 ${
       imageLeft ? "lg:order-1" : "lg:order-2"
     }`}
-    style={{ maxWidth: "600px", width: "100%" }}
   >
     <figure className="relative w-full h-full">
       <Image

@@ -23,10 +23,6 @@ export const TextSection: React.FC<TextSectionProps> = ({
   codeUrl,
   isInternal,
 }) => (
-  <div
-    className={`flex justify-center items-center p-8`}
-    style={{ maxWidth: "600px", width: "100%" }}
-  >
     <Card className="flex flex-col w-full">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
@@ -43,5 +39,4 @@ export const TextSection: React.FC<TextSectionProps> = ({
         </CardFooter>
       )}
     </Card>
-  </div>
 );
