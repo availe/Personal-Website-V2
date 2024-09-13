@@ -30,7 +30,7 @@ const SectionEntry: React.FC<ExperienceSectionProps> = ({
       <CardHeader>
         <h2 className="text-2xl md:text-3xl lg:text-center">{title}</h2>
       </CardHeader>
-      <CardContent className="grid grid-flow-row gap-12 pt-12 pb-12">
+      <CardContent className="grid grid-flow-row py-12 text-center md:text-start gap-12">
         {experiences.map((exp, index) => (
           <ExperienceEntry
             key={index}

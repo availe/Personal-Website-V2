@@ -5,9 +5,9 @@ import { experiences, projects } from "@/data/txt/home-data";
 export default function Home() {
   return (
     <>
-      <div className="grid grid-flow-row gap-6">
+      <div className="grid grid-flow-row">
         <Hero />
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-24 lg:mx-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-24 lg:mx-24">
           <SectionEntry
             experiences={projects}
             title="Projects"
