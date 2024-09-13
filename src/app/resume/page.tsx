@@ -1,4 +1,4 @@
-import resumeData from "./resume-data";
+import resumeData from "../../data/txt/resume-data";
 
 export default function ResumePage() {
   const headerStyle = "text-xl font-bold border-b-2 border-gray-600";
