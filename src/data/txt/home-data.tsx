@@ -1,13 +1,13 @@
 const experiences = [
   {
-    link: "https://www.nmrk.com",
+    link: "/resume",
     name: "Newmark",
     role: "Software Engineer Intern",
     period: "Summer 2024",
     description: "Angular and .NET Full Stack Web Development",
   },
   {
-    link: "https://www.innovare.pe",
+    link: "/resume",
     name: "Innovare",
     role: "Linux Technician Intern",
     period: "Fall 2023",
@@ -18,14 +18,14 @@ const experiences = [
 
 const projects = [
   {
-    link: "https://github.com/availe/",
+    link: "/projects",
     name: "Escape",
     role: "Game Jam Submission",
     period: "Winter 2024",
     description: "Desktop-only platformer developed with Godot",
   },
   {
-    link: "https://github.com/availe/Expense-Tracker",
+    link: "/projects",
     name: "Expense Tracker",
     role: "Capstone Project",
     period: "Fall 2023",

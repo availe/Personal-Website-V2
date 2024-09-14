@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 interface ExperienceEntryProps {
@@ -27,11 +28,9 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
       </div>
       <p>{description}</p>
       <div className="flex justify-center md:justify-end pt-2">
-        <Button variant="outline">
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            {callToAction}
-          </a>
-        </Button>
+        <Link href={link}>
+          <Button variant="outline">{callToAction}</Button>
+        </Link>
       </div>
     </div>
   );
