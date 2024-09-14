@@ -21,6 +21,9 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
+          driver-opts: image=moby/buildkit:latest
 
       - name: Cache Docker layers
         uses: actions/cache@v4
@@ -32,10 +35,12 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build \
+          docker buildx build \
             --cache-from type=local,src=/tmp/.buildx-cache \
             --cache-to type=local,dest=/tmp/.buildx-cache-new,mode=max \
-            -t availe:latest .
+            -t availe:latest \
+            --load \
+            .
 
       - name: Update Docker cache
         run: |
