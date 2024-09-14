@@ -11,7 +11,7 @@ interface ProjectData {
 const ProjectsData: ProjectData[] = [
   {
     imageSrc: "/escape-mockup.webp",
-    imageAlt: "Expense Tracker Mockup",
+    imageAlt: "Screenshot of Escape",
     projectName: "Escape - Desktop Only",
     projectDescription:
       "Godot Engine",
@@ -29,7 +29,7 @@ const ProjectsData: ProjectData[] = [
     projectDescription:
       "Project Overview",
     projectDetails: [
-      "The Expense Tracker is a full-stack JavaFX that allows users to simulate corporate expenses. The app supports multiple users, with a root user who can authorize managers or individual users.",
+      "The Expense Tracker is a full-stack JavaFX app that allows users to simulate corporate expenses. The app supports multiple users, with a root user who can authorize managers or individual users.",
       "A SQLite database stores user information and expenses, while a Maven project structure automatically manages dependencies including JavaFX installation. The UI itself is provided via JavaFX.",
     ],
     codeUrl: "https://github.com/availe/Expense-Tracker",
