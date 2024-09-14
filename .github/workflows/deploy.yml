@@ -6,9 +6,6 @@ on:
       - main
     paths-ignore:
       - "README.md"
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -36,6 +33,18 @@ jobs:
           cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/availe:cache
           cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/availe:cache,mode=max
 
+      - name: Transfer configuration files to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
+          source: |
+            docker-compose.yml
+            nginx.conf
+          target: "${{ secrets.TARGET_PATH }}"
+
       - name: Deploy on EC2
         uses: appleboy/ssh-action@v0.1.7
         with:
@@ -44,7 +53,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           script: |
+            cd ${{ secrets.TARGET_PATH }}
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-            docker pull ${{ secrets.DOCKER_USERNAME }}/availe:latest
-            docker-compose down
-            docker-compose up -d
+            docker-compose pull
+            docker-compose up -d --force-recreate
