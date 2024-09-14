@@ -1,11 +1,15 @@
+version: "3.9"
+
 services:
   app:
     image: availe:latest
+    platform: linux/arm64
     networks:
       - webnet
 
   nginx:
     image: nginx:latest
+    platform: linux/arm64
     ports:
       - "80:80"
       - "443:443"
