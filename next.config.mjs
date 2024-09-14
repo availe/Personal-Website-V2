@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    async headers() {
+      return [
+        {
+          source: '/(.*?)', // Applies the headers to all paths
+          headers: [
+            { key: 'Cross-Origin-Embedder-Policy', value: 'require-corp' },
+            { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' }
+          ],
+        },
+      ];
+    },
+  };
+  
+  export default nextConfig;
+  

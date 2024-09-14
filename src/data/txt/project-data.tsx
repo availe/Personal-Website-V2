@@ -11,26 +11,25 @@ interface ProjectData {
 const ProjectsData: ProjectData[] = [
   {
     imageSrc: "/escape-mockup.webp",
-    imageAlt: "Screenshot of Escape",
+    imageAlt: "Screenshot of Escape.",
     projectName: "Escape - Desktop Only",
-    projectDescription:
-      "Godot Engine",
+    projectDescription: "Built using the Godot Engine.",
     projectDetails: [
-      "Escape is a desktop-only 2D platformer game jam submission. The goal is to not be pushed out of the arena by the monster following you.",
-      "Use the WASD or arrow keys to move. The up key lets you jump or double jump, whereas the down key makes you fall quickly. Pressing the shift key while on the ground allows you mega-jump.",
+      "2D desktop-only platformer; avoid getting pushed out of the arena by the monsters. Prototype game jam entry. A remastered version is planned for release at the subsequent jam.",
+      "Navigate with WASD or arrow keys. Jump with 'up', fast drop with 'down.' Additionally, hold 'shift' while touching the ground to mega-jump.",
+      "No win/lose condition. If you're pushed out of the arena restart the game by refreshing the tab.",
     ],
-    codeUrl: "/resume",
+    codeUrl: "/projects/escape",
     isInternal: true,
   },
   {
     imageSrc: "/expense-tracker-mockup.svg",
-    imageAlt: "Expense Tracker Mockup",
+    imageAlt: "Expense Tracker Mockup.",
     projectName: "Expense Tracker",
-    projectDescription:
-      "Project Overview",
+    projectDescription: "A tool to manage and track corporate expenses.",
     projectDetails: [
-      "The Expense Tracker is a full-stack JavaFX app that allows users to simulate corporate expenses. The app supports multiple users, with a root user who can authorize managers or individual users.",
-      "A SQLite database stores user information and expenses, while a Maven project structure automatically manages dependencies including JavaFX installation. The UI itself is provided via JavaFX.",
+      "JavaFX full-stack app simulating corporate expenses, supporting multiple user roles.",
+      "User data and expenses are stored in a SQLite database, with a Maven-managed JavaFX environment.",
     ],
     codeUrl: "https://github.com/availe/Expense-Tracker",
     isInternal: false,
