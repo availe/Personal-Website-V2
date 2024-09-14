@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   app:
-    image: ${{ secrets.DOCKER_USERNAME }}/availe:latest
-    environment:
+    image: availe:latest
     networks:
       - webnet
 
