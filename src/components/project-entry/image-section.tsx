@@ -14,7 +14,6 @@ export const ImageSection: React.FC<ImageSectionProps> = ({ src, alt }) => (
         fill
         style={{ objectFit: "contain" }}
       />
-      <figcaption className="text-center mt-2">{alt}</figcaption>
     </figure>
   </div>
 );
