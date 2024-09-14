@@ -14,18 +14,31 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
 }) => (
   <section
     aria-labelledby="project-title"
-    className={`container mx-auto grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center ${
-      imageLeft ? "lg:order-1" : "lg:order-2"
-    }`}
+    className="container mx-auto grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center"
   >
-    <ImageSection src={imageSrc} alt={imageAlt} imageLeft={imageLeft} />
-    <TextSection
-      title={projectName}
-      description={projectDescription}
-      details={projectDetails}
-      codeUrl={codeUrl}
-      isInternal={isInternal}
-    />
+    {imageLeft ? (
+      <>
+        <ImageSection src={imageSrc} alt={imageAlt} />
+        <TextSection
+          title={projectName}
+          description={projectDescription}
+          details={projectDetails}
+          codeUrl={codeUrl}
+          isInternal={isInternal}
+        />
+      </>
+    ) : (
+      <>
+        <TextSection
+          title={projectName}
+          description={projectDescription}
+          details={projectDetails}
+          codeUrl={codeUrl}
+          isInternal={isInternal}
+        />
+        <ImageSection src={imageSrc} alt={imageAlt} />
+      </>
+    )}
   </section>
 );
 

@@ -31,7 +31,7 @@ const ProjectsData: ProjectData[] = [
       "JavaFX full-stack app simulating corporate expenses, supporting multiple user roles.",
       "User data and expenses are stored in a SQLite database, with a Maven-managed JavaFX environment.",
     ],
-    codeUrl: "https://github.com/availe/Expense-Tracker",
+    codeUrl: "https://github.com/xyz/Expense-Tracker",
     isInternal: false,
   },
 ];
