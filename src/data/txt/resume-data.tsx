@@ -22,7 +22,7 @@ const resumeData = {
         location: "Manhattan, NY",
         duration: "Jun 2024 – Aug 2024",
         responsibilities: [
-          "Collaborated closely with 20+ engineers on an internal project utilized by Quality Control team",
+          "Collaborated closely with 20+ engineers on an internal project utilized by the Quality Control team",
           "Designed and implemented an Angular front-end view for managing web crawling operations.",
           "Utilized Angular routing to connect dashboard rows to corresponding website views.",
           "Implemented a front-end view that lists all links and attachments associated with a given document.",
