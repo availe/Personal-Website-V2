@@ -6,4 +6,5 @@ export interface ProjectEntryProps {
   projectDetails: string[];
   codeUrl: string;
   isInternal: boolean;
+  preload: boolean;
 }

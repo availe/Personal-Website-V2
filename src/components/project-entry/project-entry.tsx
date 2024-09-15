@@ -10,12 +10,13 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   projectDetails,
   codeUrl,
   isInternal,
+  preload
 }) => (
   <section
     aria-labelledby="project-title"
     className="container mx-auto flex flex-col lg:flex-row justify-center items-center"
   >
-    <ImageSection src={imageSrc} alt={imageAlt} />
+    <ImageSection src={imageSrc} alt={imageAlt} preload={preload} />
     <TextSection
       title={projectName}
       description={projectDescription}
