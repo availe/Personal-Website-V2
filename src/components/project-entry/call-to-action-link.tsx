@@ -5,9 +5,9 @@ export const callToActionLink = (isInternal: boolean, codeUrl: string) => {
     "text-center text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out";
 
   return isInternal ? (
-      <a href={codeUrl} className={linkClass}>
-        View Project
-      </a>
+    <a href={codeUrl} className={linkClass}>
+      View Project
+    </a>
   ) : (
     <a
       href={codeUrl}
