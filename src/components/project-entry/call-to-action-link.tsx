@@ -6,7 +6,9 @@ export const callToActionLink = (isInternal: boolean, codeUrl: string) => {
 
   return isInternal ? (
     <Link href={codeUrl} passHref>
-      <span className={linkClass}>View Project</span>
+      <a href={codeUrl} className={linkClass}>
+        View Project
+      </a>
     </Link>
   ) : (
     <a
