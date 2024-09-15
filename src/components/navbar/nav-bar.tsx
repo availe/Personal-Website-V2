@@ -1,36 +1,15 @@
 "use client";
 
-import { useMediaQuery } from "@/hooks/use-media-query";
 import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
-import { Link, MenuIcon, XIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 import NavbarListItem from "./nav-bar-list-item";
-import { usePathname, useRouter } from "next/navigation";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import NavbarSocialListItem from "./nav-bar-social-list-item";
 import { useState } from "react";
+import { navDict, socialDict } from "@/data/txt/nav-data";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const closeDrawer = () => setIsOpen(false);
-
-  const navDict = [
-    { href: "/", text: "Home" },
-    { href: "/projects", text: "Projects" },
-    { href: "/resume", text: "Resume" },
-  ];
-
-  const socialDict = [
-    {
-      href: "https://www.linkedin.com/in/rafael-diaz1/",
-      icon: LinkedInLogoIcon,
-      label: "LinkedIn",
-    },
-    {
-      href: "https://github.com/availe",
-      icon: GitHubLogoIcon,
-      label: "GitHub",
-    },
-  ];
 
   return (
     <header className="sticky top-0 right-0 w-full md:bg-white z-10 md:p-2">
