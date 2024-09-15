@@ -4,12 +4,12 @@ import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
 import { MenuIcon, XIcon } from "lucide-react";
 import NavbarListItem from "./nav-bar-list-item";
 import NavbarSocialListItem from "./nav-bar-social-list-item";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { navDict, socialDict } from "@/data/txt/nav-data";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const closeDrawer = () => setIsOpen(false);
+  const closeDrawer = useCallback(() => setIsOpen(false), []);
 
   return (
     <header className="sticky top-0 right-0 w-full md:bg-white z-10 md:p-2">
