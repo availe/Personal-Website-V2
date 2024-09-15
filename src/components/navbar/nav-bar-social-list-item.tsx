@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 interface NavbarSocialListItemProps {
   href: string;
   label: string;
@@ -27,4 +25,4 @@ const NavbarSocialListItem = ({
   );
 };
 
-export default memo(NavbarSocialListItem);
+export default NavbarSocialListItem;

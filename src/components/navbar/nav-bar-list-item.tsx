@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { memo } from "react";
 
 interface NavbarListItemProps {
   href: string;
@@ -11,10 +10,12 @@ const NavbarListItem = ({ href, text, onItemClick }: NavbarListItemProps) => {
   const itemClass = `text-xl border-b border-transparent hover:border-b-gray-200 ml-10`;
 
   return (
-    <li className={itemClass} onClick={onItemClick}>
-      <Link href={href}>{text}</Link>
-    </li>
+    <Link href={href}>
+      <li className={itemClass} onClick={onItemClick}>
+        {text}
+      </li>
+    </Link>
   );
 };
 
-export default memo(NavbarListItem);
+export default NavbarListItem;
