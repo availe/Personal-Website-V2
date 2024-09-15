@@ -1,6 +1,6 @@
 const Escape = () => {
     return (
-        <iframe src="/Escape HTML/game.html" className="h-screen w-screen"></iframe>
+        <iframe src="/escape-html/game.html" className="h-screen w-screen"></iframe>
     );
 }
 

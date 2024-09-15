@@ -10,12 +10,12 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self'; worker-src 'self'; frame-ancestors 'none';",
+              "default-src 'self'; script-src 'self'; worker-src 'self'; frame-ancestors 'self';",
           },
         ],
       },
       {
-        source: "/Escape HTML/:path*",
+        source: "/escape-html/:path*",
         headers: [
           { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
