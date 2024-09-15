@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { memo } from "react";
 
 interface NavbarListItemProps {
   href: string;
@@ -18,4 +19,4 @@ const NavbarListItem = ({ href, text, onItemClick }: NavbarListItemProps) => {
   );
 };
 
-export default NavbarListItem;
+export default memo(NavbarListItem);
