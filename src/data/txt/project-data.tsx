@@ -20,7 +20,7 @@ const ProjectsData: ProjectData[] = [
       "No win/lose condition. If you're pushed out of the arena restart the game by refreshing the tab.",
     ],
     codeUrl: "/projects/escape",
-    isInternal: true,
+    isInternal: false,
   },
   {
     imageSrc: "/expense-tracker-mockup.svg",
