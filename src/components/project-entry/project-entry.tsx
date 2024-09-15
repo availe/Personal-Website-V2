@@ -9,36 +9,20 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   projectDescription,
   projectDetails,
   codeUrl,
-  imageLeft,
   isInternal,
 }) => (
   <section
     aria-labelledby="project-title"
-    className="container mx-auto grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center"
+    className="container mx-auto flex flex-col lg:flex-row justify-center items-center"
   >
-    {imageLeft ? (
-      <>
-        <ImageSection src={imageSrc} alt={imageAlt} />
-        <TextSection
-          title={projectName}
-          description={projectDescription}
-          details={projectDetails}
-          codeUrl={codeUrl}
-          isInternal={isInternal}
-        />
-      </>
-    ) : (
-      <>
-        <TextSection
-          title={projectName}
-          description={projectDescription}
-          details={projectDetails}
-          codeUrl={codeUrl}
-          isInternal={isInternal}
-        />
-        <ImageSection src={imageSrc} alt={imageAlt} />
-      </>
-    )}
+    <ImageSection src={imageSrc} alt={imageAlt} />
+    <TextSection
+      title={projectName}
+      description={projectDescription}
+      details={projectDetails}
+      codeUrl={codeUrl}
+      isInternal={isInternal}
+    />
   </section>
 );
 

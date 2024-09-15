@@ -5,6 +5,5 @@ export interface ProjectEntryProps {
   projectDescription: string;
   projectDetails: string[];
   codeUrl: string;
-  imageLeft: boolean;
   isInternal: boolean;
 }

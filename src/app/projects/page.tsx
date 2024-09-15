@@ -3,9 +3,9 @@ import ProjectsData from "@/data/txt/project-data";
 
 const ProjectsPage = () => {
   return (
-    <div className="container mx-auto grid grid-flow-row gap-12">
+    <div className="container mx-auto flex flex-col gap-12 pt-4">
       {ProjectsData.map((project, index) => (
-        <ProjectEntry key={index} {...project} imageLeft={false} />
+        <ProjectEntry key={index} {...project} />
       ))}
     </div>
   );
