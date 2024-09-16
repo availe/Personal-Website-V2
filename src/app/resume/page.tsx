@@ -50,7 +50,7 @@ export default function ResumePage() {
       <section>
         <h2 className={headerStyle}>Internship Experience</h2>
         {resumeData.experience.map((exp, index) => (
-          <div id={exp.company.toLowerCase()} key={index} className="mt-4 scroll-mt-[55px]">
+          <div id={exp.company.toLowerCase()} key={index} className="mt-4 scroll-mt-[0px]">
             <p className="font-semibold">
               {exp.company} - {exp.role}{" "}
               <span className="font-normal">
