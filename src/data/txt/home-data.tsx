@@ -1,13 +1,13 @@
 const experiences = [
   {
-    link: "/resume",
+    link: "/resume#newmark",
     name: "Newmark",
     role: "Software Engineer Intern",
     period: "Summer 2024",
     description: "Angular and .NET Full Stack Web Development",
   },
   {
-    link: "/resume",
+    link: "/resume#innovare",
     name: "Innovare",
     role: "Linux Technician Intern",
     period: "Fall 2023",
