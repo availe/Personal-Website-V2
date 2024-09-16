@@ -4,7 +4,7 @@ export default function ResumePage() {
   const headerStyle = "text-xl font-bold border-b-2 border-gray-600";
 
   return (
-    <div className="container mx-auto px-8 flex flex-col gap-8">
+    <div className="container mx-auto px-8 flex flex-col gap-8 pt-4 md:pt-2">
       {/* Education Section */}
       <section>
         <h2 className={headerStyle}>Education</h2>
