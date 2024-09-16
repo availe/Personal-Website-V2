@@ -54,7 +54,7 @@ export default function ResumePage() {
             <p className="font-semibold">
               {exp.company} - {exp.role}{" "}
               <span className="font-normal">
-                ({exp.duration}, {exp.location})
+                ({exp.duration} | {exp.location})
               </span>
             </p>
             <ul className="list-disc pl-5 mt-2">
