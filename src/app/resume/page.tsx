@@ -87,9 +87,9 @@ export default function ResumePage() {
       </section>
 
       <div className="flex justify-center">
-        <span className="text-center text-sm text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out">
+        <a href="/Rafael_Diaz_Resume.pdf" download className="text-center text-sm text-[#ec6240] hover:text-[#ffa07a] transition-colors duration-100 ease-in-out">
           Download as PDF
-        </span>
+        </a>
       </div>
     </div>
   );
