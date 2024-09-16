@@ -18,14 +18,14 @@ const experiences = [
 
 const projects = [
   {
-    link: "/projects",
+    link: "/projects#escape-project",
     name: "Escape",
     role: "Game Jam Submission",
     period: "Winter 2024",
     description: "Desktop-only platformer developed with Godot",
   },
   {
-    link: "/projects",
+    link: "/projects#expense-tracker-project",
     name: "Expense Tracker",
     role: "Capstone Project",
     period: "Fall 2023",

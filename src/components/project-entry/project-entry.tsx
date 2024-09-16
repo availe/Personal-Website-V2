@@ -6,6 +6,7 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
   imageSrc,
   imageAlt,
   projectName,
+  projectUrlName,
   projectDescription,
   projectDetails,
   codeUrl,
@@ -14,7 +15,8 @@ const ProjectEntry: React.FC<ProjectEntryProps> = ({
 }) => (
   <section
     aria-labelledby="project-title"
-    className="container mx-auto flex flex-col lg:flex-row justify-center items-center"
+    className="container mx-auto flex flex-col lg:flex-row justify-center items-center scroll-mt-[55px]"
+    id={projectUrlName}
   >
     <ImageSection src={imageSrc} alt={imageAlt} preload={preload} />
     <TextSection

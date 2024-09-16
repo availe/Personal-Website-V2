@@ -2,6 +2,7 @@ interface ProjectData {
   imageSrc: string;
   imageAlt: string;
   projectName: string;
+  projectUrlName: string;
   projectDescription: string;
   projectDetails: string[];
   codeUrl: string;
@@ -13,6 +14,7 @@ const ProjectsData: ProjectData[] = [
     imageSrc: "/escape-mockup.webp",
     imageAlt: "Screenshot of Escape.",
     projectName: "Escape - Desktop Only",
+    projectUrlName: "escape-project",
     projectDescription: "Built using the Godot Engine.",
     projectDetails: [
       "2D desktop-only platformer; avoid getting pushed out of the arena by the monsters. Prototype game jam entry. A remastered version is planned for release at the subsequent jam.",
@@ -26,6 +28,7 @@ const ProjectsData: ProjectData[] = [
     imageSrc: "/expense-tracker-mockup.svg",
     imageAlt: "Expense Tracker Mockup.",
     projectName: "Expense Tracker",
+    projectUrlName: "expense-tracker-project",
     projectDescription: "A tool to manage and track corporate expenses.",
     projectDetails: [
       "JavaFX full-stack app simulating corporate expenses, supporting multiple user roles.",
