@@ -13,7 +13,7 @@ const Hero = () => {
     const result = parser.getResult();
     const isLinkedInApp = result.ua.includes("LinkedIn");
     if (isLinkedInApp) {
-      setHeightClass("min-h-[600px]");
+      setHeightClass("min-h-[550px]");
     }
   }, []);
 
