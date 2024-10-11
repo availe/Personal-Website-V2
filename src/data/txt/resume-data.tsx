@@ -1,4 +1,14 @@
+import { FaPhone, FaEnvelope, FaGlobe, FaLinkedin, FaGithub } from 'react-icons/fa'; 
+
+
 const resumeData = {
+   contactDict: {
+    phone: { icon: FaPhone, href: `tel:${process.env.NEXT_PUBLIC_PHONE}`, label: process.env.NEXT_PUBLIC_PHONE },
+    email: { icon: FaEnvelope, href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}`, label: process.env.NEXT_PUBLIC_EMAIL },
+    website: { icon: FaGlobe, href: process.env.NEXT_PUBLIC_WEBSITE, label: process.env.NEXT_PUBLIC_WEBSITE },
+    linkedin: { icon: FaLinkedin, href: process.env.NEXT_PUBLIC_LINKEDIN, label: process.env.NEXT_PUBLIC_LINKEDIN },
+    github: { icon: FaGithub, href: process.env.NEXT_PUBLIC_GITHUB, label: process.env.NEXT_PUBLIC_GITHUB },
+    },
     education: {
       school: "College of Staten Island",
       degree: "B.S. in Computer Science",
