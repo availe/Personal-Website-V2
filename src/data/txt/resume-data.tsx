@@ -1,6 +1,5 @@
 import { FaPhone, FaEnvelope, FaGlobe, FaLinkedin, FaGithub } from 'react-icons/fa'; 
 
-
 const resumeData = {
    contactDict: {
     phone: { icon: FaPhone, href: `tel:${process.env.NEXT_PUBLIC_PHONE}`, label: process.env.NEXT_PUBLIC_PHONE },
