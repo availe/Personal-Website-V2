@@ -1,63 +1,81 @@
 {
     "resume": {
-        "personal_info": {
-            "name": "John Doe",
-            "contacts": [
-                {"type": "email", "title": "Email", "value": "john.doe@example.com"},
-                {"type": "phone", "title": "Phone", "value": "+1234567890"},
-                {"type": "plain", "title": "Location", "value": "Springfields, Massachusetts"},
-                {"type": "hyperlink", "title": "LinkedIn", "value": "https://linkedin.com/in/johndoe"},
-                {"type": "hyperlink", "title": "GitHub", "value": "https://github.com/johndoe"},
-                {"type": "hyperlink", "title": "Website", "value": "https://www.availe.io"}
-            ]
-        },
-        "education": {
-            "title": "Education",
-            "details": [
-                {
-                    "school": "University of Example",
-                    "degree": "Bachelor of Science in Computer Science",
-                    "location": "City, State",
-                    "dates": "2018 - 2022",
-                    "coursework": ["Data Structures", "Algorithms", "Machine Learning"]
-                }
-            ]
-        },
-        "technical_skills": {
-            "title": "Technical Skills",
-            "categories": {
-                "Languages": ["Python", "Java", "C++"],
-                "Tools": ["Git", "Docker", "AWS"]
-            }
-        },
-        "work_experience": {
-            "title": "Work Experience",
-            "details": [
-                {
-                    "company": "Tech Corp",
-                    "title": "Software Engineer Intern",
-                    "location": "City, State",
-                    "dates": "Summer 2022",
-                    "responsibilities": [
-                        "Developed internal tools using Python",
-                        "Collaborated with team to improve CI/CD pipelines"
-                    ]
-                }
-            ]
-        },
-        "projects": {
-            "title": "Projects",
-            "details": [
-                {
-                    "title": "Personal Website",
-                    "link": "https://example.com",
-                    "technologies": ["HTML", "CSS", "JavaScript"],
-                    "description": [
-                        "Built a responsive personal website to showcase portfolio",
-                        "Integrated with backend APIs for dynamic content"
-                    ]
-                }
-            ]
+      "personal_info": {
+        "name": "John Doe",
+        "contacts": [
+          { "type": "email", "title": "Email", "value": "john.doe@example.com" },
+          { "type": "phone", "title": "Phone", "value": "+1234567890" },
+          {
+            "type": "plain",
+            "title": "Location",
+            "value": "Springfields, Massachusetts"
+          },
+          {
+            "type": "hyperlink",
+            "title": "LinkedIn",
+            "value": "https://linkedin.com/in/johndoe"
+          },
+          {
+            "type": "hyperlink",
+            "title": "GitHub",
+            "value": "https://github.com/johndoe"
+          },
+          {
+            "type": "hyperlink",
+            "title": "Website",
+            "value": "https://www.availe.io"
+          }
+        ]
+      },
+      "education": {
+        "title": "Education",
+        "details": [
+          {
+            "institution": "University of Example",
+            "degree": "Bachelor of Science in Computer Science",
+            "location": "City, State",
+            "graduation_date": "May 2018",
+            "coursework": ["Data Structures", "Algorithms", "Machine Learning"]
+          }
+        ]
+      },
+      "technical_skills": {
+        "title": "Technical Skills",
+        "categories": {
+          "Languages": ["Python", "Java", "C++"],
+          "Tools": ["Git", "Docker", "AWS"]
         }
+      },
+      "work_experience": {
+        "title": "Work Experience",
+        "details": [
+          {
+            "company": "Tech Corp",
+            "title": "Software Engineer Intern",
+            "location": "City, State",
+            "start_date": "June 2022",
+            "end_date": "August 2022",
+            "responsibilities": [
+              "Developed internal tools using Python",
+              "Collaborated with team to improve CI/CD pipelines"
+            ]
+          }
+        ]
+      },
+      "projects": {
+        "title": "Projects",
+        "details": [
+          {
+            "name": "Personal Website",
+            "date": "November 2023 – December 2023",
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "description": [
+              "Built a responsive personal website to showcase portfolio",
+              "Integrated with backend APIs for dynamic content"
+            ]
+          }
+        ]
+      }
     }
-}
+  }
+  
