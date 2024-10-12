@@ -8,7 +8,7 @@ import debounce from 'lodash/debounce';
 import defaultResume from "../../../data/json/sampleResume.json";
 
 const fetchPDF = async (jsonData: any): Promise<string> => {
-  const response = await fetch("https://pytex-resume-builder-3cuw0744i-availes-projects.vercel.app/api/index", {
+  const response = await fetch("https://pytex-resume-builder-api.vercel.app/api/index", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(jsonData),
