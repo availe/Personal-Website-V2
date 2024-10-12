@@ -12,9 +12,9 @@ export default function ResumePage() {
         </a>
       </div>
       
-      <div className="fixed bottom-4 right-4">
+      {/* <div className="fixed bottom-4 right-4">
         <ContactCTA />
-        </div>
+        </div> */}
     </div>
   );
 }
