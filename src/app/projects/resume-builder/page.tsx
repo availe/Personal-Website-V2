@@ -1,20 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { json } from "@codemirror/lang-json";
 import CodeMirror from "@uiw/react-codemirror";
+import { json } from "@codemirror/lang-json";
 import useSWR from 'swr';
 import debounce from 'lodash/debounce';
+
 import defaultResume from "../../../data/json/sampleResume.json";
 
 const fetchPDF = async (jsonData: any): Promise<string> => {
-  try {
-    console.log("Sending JSON data:", JSON.stringify(jsonData, null, 2));
-  } catch (error) {
-    console.error("Invalid JSON data:", error);
-    throw new Error("Invalid JSON");
-  }
-
   const response = await fetch("https://pytex-resume-builder-api.vercel.app/api/index", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -23,20 +17,29 @@ const fetchPDF = async (jsonData: any): Promise<string> => {
 
   if (!response.ok) throw new Error("Failed to fetch PDF");
 
-  const blob = await response.blob();
+  const blob: Blob = await response.blob();
   return URL.createObjectURL(blob);
 };
 
-const ResumeBuilder = () => {
-  const [jsonInput, setJsonInput] = useState(JSON.stringify(defaultResume, null, 2));
-  const [triggerFetch, setTriggerFetch] = useState(false);
+const ResumeBuilder: React.FC = () => {
+  const [jsonInput, setJsonInput] = useState<string>(JSON.stringify(defaultResume, null, 2));
+  const [triggerFetch, setTriggerFetch] = useState<boolean>(false);
 
-  const { data: pdfUrl } = useSWR(triggerFetch ? ['pdf', JSON.parse(jsonInput)] : null, (_: string, jsonData: any) => fetchPDF(jsonData), { revalidateOnFocus: false });
+  const validateAndSetJsonInput = (value: string) => {
+    try {
+      JSON.parse(value);
+      setJsonInput(value);
+      setTriggerFetch(true);
+    } catch (error) {
+      console.error("Invalid JSON:", error);
+      setTriggerFetch(false);
+    }
+  };
 
-  const handleEditorChange = debounce((value: string) => {
-    setJsonInput(value);
-    setTriggerFetch(true);
-  }, 1000);
+  const handleEditorChange = debounce(validateAndSetJsonInput, 1000);
+
+  const { data: pdfUrl } = useSWR(triggerFetch ? ['pdf', JSON.parse(jsonInput)] : null, 
+    (_: string, jsonData: any) => fetchPDF(jsonData), { revalidateOnFocus: false });
 
   return (
     <div className="flex h-screen w-screen">
@@ -44,7 +47,7 @@ const ResumeBuilder = () => {
         value={jsonInput}
         height="100%"
         extensions={[json()]}
-        onChange={handleEditorChange}
+        onChange={(value: string) => handleEditorChange(value)}
       />
       <iframe src={pdfUrl || "/Sample_Resume.pdf"} className="flex-1 h-full" />
     </div>
