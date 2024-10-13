@@ -40,7 +40,7 @@ const ResumeBuilder: React.FC = () => {
       />
       </div>
       <div className="w-1/2">
-      {pdfUrl && <iframe src={pdfUrl} className="flex-1 h-full w-full" title="Resume PDF Preview"></iframe>}
+      <iframe src={`${pdfUrl}#toolbar=0&navpanes=0`} className="flex-1 h-full w-full" title="Resume PDF Preview"></iframe>
       </div>
     </div>
   );
