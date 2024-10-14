@@ -6,7 +6,7 @@
         {
           "type": "phone",
           "title": "Phone",
-          "value": "+1234567890",
+          "value": "123-456-7890",
           "icon": "faPhone"
         },
         {
@@ -32,12 +32,6 @@
           "title": "Website",
           "value": "https://www.availe.io",
           "icon": "faGlobe"
-        },
-        {
-          "type": "plain",
-          "title": "Location",
-          "value": "Springfields, Massachusetts",
-          "icon": "faMapMarker"
         }
       ]
     },
