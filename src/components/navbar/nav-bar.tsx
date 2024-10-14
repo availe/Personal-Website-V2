@@ -5,7 +5,7 @@ import { MenuIcon, XIcon } from "lucide-react";
 import NavbarListItem from "./nav-bar-list-item";
 import NavbarSocialListItem from "./nav-bar-social-list-item";
 import { useCallback, useState } from "react";
-import { navDict, socialDict } from "@/data/txt/nav-data";
+import { navDict, socialDict } from "@/data/tsx/nav-data";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -11,6 +11,20 @@ interface ProjectData {
 
 const ProjectsData: ProjectData[] = [
   {
+    imageSrc: "/resume-builder.webp",
+    imageAlt: "Screenshot of Resume Builder.",
+    projectName: "PyTex Resume Builder - Desktop Only",
+    projectUrlName: "resume-builder",
+    projectDescription: "Build professional Latex resumes with JSON.",
+    projectDetails: [
+      "Created a web tool to generate professional LaTeX resumes from structured JSON input.",
+      "Real time processing of JSON inputs, allowing you to view resume as you build it.",
+      "Major updates planned for future.",
+    ],
+    codeUrl: "/projects/resume-builder",
+    isInternal: true,
+  },
+  {
     imageSrc: "/escape-mockup.webp",
     imageAlt: "Screenshot of Escape.",
     projectName: "Escape - Desktop Only",

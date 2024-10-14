@@ -1,6 +1,6 @@
 import SectionEntry from "@/components/home/section-entry";
 import Hero from "@/components/home/hero";
-import { experiences, projects } from "@/data/txt/home-data";
+import { experiences, projects } from "@/data/tsx/home-data";
 
 export default function Home() {
   return (

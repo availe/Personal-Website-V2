@@ -1,5 +1,5 @@
 import ProjectEntry from "@/components/project-entry/project-entry";
-import ProjectsData from "@/data/txt/project-data";
+import ProjectsData from "@/data/tsx/project-data";
 
 const ProjectsPage = () => {
   return (

@@ -1,4 +1,4 @@
-import resumeData from "../../data/txt/resume-data";
+import resumeData from "../../data/tsx/resume-data";
 
 export default function ResumeContent() {
   const headerStyle = "text-xl font-bold border-b-2 border-gray-600";
