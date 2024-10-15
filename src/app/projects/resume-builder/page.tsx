@@ -34,7 +34,7 @@ const ResumeBuilder: React.FC = () => {
 
   return (
     <>
-    <p>This is an early-stage prototype. Major stability and feature updates are planned. For now, real-time PDF generation via typing is a proof of concept and not a stable feature. If you actually wish to build a resume with this tool, it's best to copy-paste completed JSON.</p>
+    <p>This tool is an early-stage prototype, with significant stability and feature updates planned for future releases. At this stage, real-time PDF generation via typing serves as a proof of concept and is not a stable feature. If you are creating a resume, it is recommended to copy and paste the finalized JSON instead.</p>
     <div className="flex h-screen w-screen">
       <div className="w-1/2">
         <CodeMirror
