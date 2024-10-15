@@ -33,6 +33,8 @@ const ResumeBuilder: React.FC = () => {
   }, 1000);
 
   return (
+    <>
+    <p>This application is currently unstable on Safari. Please open this with Chrome for an optimal experience.</p>
     <div className="flex h-screen w-screen">
       <div className="w-1/2">
         <CodeMirror
@@ -48,6 +50,7 @@ const ResumeBuilder: React.FC = () => {
         <iframe src={`${pdfUrl}#toolbar=0&navpanes=0`} className="flex-1 h-full w-full" title="Resume PDF Preview"></iframe>
       </div>
     </div>
+    </>
   );
 };
 
