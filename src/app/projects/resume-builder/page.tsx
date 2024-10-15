@@ -34,7 +34,7 @@ const ResumeBuilder: React.FC = () => {
 
   return (
     <>
-    <p>This application is currently unstable on Safari. Please open this with Chrome for an optimal experience.</p>
+    <p>This early-stage application is currently unstable on Safari. Please open this with Chrome for an optimal experience. Future improvements are planned.</p>
     <div className="flex h-screen w-screen">
       <div className="w-1/2">
         <CodeMirror
