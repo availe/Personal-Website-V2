@@ -11,6 +11,20 @@ interface ProjectData {
 
 const ProjectsData: ProjectData[] = [
   {
+    imageSrc: "/Resume-Builder-V2.png",
+    imageAlt: "Screenshot of Resume Builder.",
+    projectName: "Resume Builder V2",
+    projectUrlName: "resume-builder-v2",
+    projectDescription: "Build professional Latex resumes with JSON.",
+    projectDetails: [
+      "Improved resume builder with new GUI.",
+      "Client-side instead of server-side processing.",
+      "Temporary description while site revamp.",
+    ],
+    codeUrl: "https://resume-builder.availe.io",
+    isInternal: false,
+  },
+  {
     imageSrc: "/resume-builder.webp",
     imageAlt: "Screenshot of Resume Builder.",
     projectName: "PyTex Resume Builder - Desktop Only",
